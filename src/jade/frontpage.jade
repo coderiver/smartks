@@ -1,0 +1,79 @@
+extends _layout
+
+block title
+  title Frontpage
+
+block content
+  //BEGIN main-wrapper
+  .main-wrapper
+
+    nav.nav-btns
+      button.btn(type="button") Бестселери
+      button.btn(type="button") Новi надходження
+      a.btn(href="#") Безкоштовнi
+      a.btn(href="#") Аудіолітература
+
+    .book
+      .book__cover
+        img(src="img/covers/cover1.jpg", alt="")
+      strong.book__title Мой друг Мегрэ
+      span.book__author Жорж Сіменон
+      .book__action
+        a.btn.btn_read(href="#")
+          i.icon.icon-book
+          |  Читати
+        button.btn.btn_border.btn_circle(type="button")
+          .icon.icon-book-plus
+
+    .book
+      .book__cover
+        img(src="img/covers/cover2.jpg", alt="")
+      strong.book__title Заколдованный замок. Сборник
+      span.book__author Едґар Аллан По
+      .book__action
+        a.btn.btn_read(href="#")
+          i.icon.icon-book
+          |  Читати
+        button.btn.btn_border.btn_circle(type="button")
+          .icon.icon-book-plus
+
+    .book
+      .book__cover
+        img(src="img/covers/cover3.jpg", alt="")
+      strong.book__title Сладкий плен его объятий
+      span.book__author Олександра Хоукінз
+      .book__action
+        a.btn.btn_read(href="#")
+          i.icon.icon-book
+          |  Читати
+        button.btn.btn_border.btn_circle(type="button")
+          .icon.icon-book-plus
+
+    .book
+      .book__cover
+        img(src="img/covers/cover4.jpg", alt="")
+      strong.book__title Сиротка. Расплата за прошлое
+      span.book__author Марі-Бернадетт Дюпюї
+      .book__action
+        a.btn.btn_read(href="#")
+          i.icon.icon-book
+          |  Читати
+        button.btn.btn_border.btn_circle(type="button")
+          .icon.icon-book-plus
+
+    .book
+      .book__cover
+        img(src="img/covers/cover5.jpg", alt="")
+      strong.book__title Тайные наслаждения
+      span.book__author Джоржетт Хейєр
+      .book__action
+        a.btn.btn_read(href="#")
+          i.icon.icon-book
+          |  Читати
+        button.btn.btn_border.btn_circle(type="button")
+          .icon.icon-book-plus
+
+    button.btn.btn_border.btn_more(tupe="button") Показати ще
+  //END main-wrapper
+
+  block notice

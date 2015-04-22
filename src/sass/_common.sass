@@ -1,0 +1,56 @@
+$blue: #109DFF
+$yellow: #FEDC00
+
+
++font("MuseoSansCyrl-100", museosanscyrl_100)
++font("MuseoSansCyrl-300", museosanscyrl_300)
++font("MuseoSansCyrl-500", museosanscyrl_500)
++font("MuseoSansCyrl-700", museosanscyrl_700)
+
+=light
+  font-family: "MuseoSansCyrl-100", Helvetica, Arial, sans-serif
+  font-style: normal
+
+=reg
+  font-family: "MuseoSansCyrl-300", Helvetica, Arial, sans-serif
+  font-style: normal
+
+=bolder
+  font-family: "MuseoSansCyrl-500", Helvetica, Arial, sans-serif
+  font-style: normal
+
+=bold
+  font-family: "MuseoSansCyrl-700", Helvetica, Arial, sans-serif
+  font-style: normal
+
+
+body
+  font-size: 14px
+  line-height: 1.2
+  +reg
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+a
+  color: $blue
+
+.out
+  overflow: hidden
+
+
+#screen-container
+  width: 320px
+  margin: 20px auto
+  min-height: 100%
+  box-shadow: 0 0 3px 0 lightblue
+  position: relative
+  &.is-switched
+    width: 335px
+    height: 568px
+    min-height: 0
+    overflow-x: hidden
+    overflow-y: auto
+
+.main-wrapper
+  padding: 20px 20px 0
+  position: relative
