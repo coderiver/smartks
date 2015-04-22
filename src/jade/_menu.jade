@@ -1,10 +1,42 @@
 //BEGIN menu
-.menu
+nav.menu
   .menu__head
-    i.icon.icon-planetary
+    .menu__icon.icon.icon-planetary
     .lang
       label.lang__label(for="lang") Література видана:
-      .lang__selected 
-        span всіма мовами
+      .lang__select
+        span.lang__selected всіма мовами
         i.icon.icon-arrow.icon-bullet
+        select(name="lang")
+          option(value="") всіма мовами
+          option(value="") українська
+          option(value="") російська
+          option(value="") англійська
+          option(value="") інша
+  a.menu__item(href="#")
+    .menu__icon.icon.icon-logo
+    span Головна
+  a.menu__item(href="#")
+    .menu__icon.icon.icon-book2
+    span Мої книжки
+  a.menu__item(href="#")
+    .menu__icon.icon.icon-label
+    span Бестселери
+  a.menu__item(href="#")
+    .menu__icon.icon.icon-down
+    span Новi надходження
+  a.menu__item(href="#")
+    .menu__icon.icon.icon-list
+    span Жанри
+  a.menu__item(href="#")
+    .menu__icon.icon.icon-pencil
+    span Автори
+  a.menu__item(href="#")
+    .menu__icon.icon.icon-copy
+    span Новини
+  a.menu__item(href="#")
+    .menu__icon.icon.icon-gear
+    span Налаштування
+
+
 //END menu

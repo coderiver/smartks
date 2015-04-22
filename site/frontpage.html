@@ -14,14 +14,31 @@
     <!--BEGIN out-->
     <div id="screen-container">
       <!--BEGIN menu-->
-      <div class="menu">
-        <div class="menu__head"><i class="icon icon-planetary"></i>
+      <nav class="menu">
+        <div class="menu__head">
+          <div class="menu__icon icon icon-planetary"></div>
           <div class="lang">
             <label for="lang" class="lang__label">Література видана:</label>
-            <div class="lang__selected"> <span>всіма мовами</span><i class="icon icon-arrow icon-bullet"></i></div>
+            <div class="lang__select"><span class="lang__selected">всіма мовами</span><i class="icon icon-arrow icon-bullet"></i>
+              <select name="lang">
+                <option value="">всіма мовами</option>
+                <option value="">українська</option>
+                <option value="">російська</option>
+                <option value="">англійська</option>
+                <option value="">інша</option>
+              </select>
+            </div>
           </div>
-        </div>
-      </div>
+        </div><a href="#" class="menu__item">
+          <div class="menu__icon icon icon-logo"></div><span>Головна</span></a><a href="#" class="menu__item">
+          <div class="menu__icon icon icon-book2"></div><span>Мої книжки</span></a><a href="#" class="menu__item">
+          <div class="menu__icon icon icon-label"></div><span>Бестселери</span></a><a href="#" class="menu__item">
+          <div class="menu__icon icon icon-down"></div><span>Новi надходження</span></a><a href="#" class="menu__item">
+          <div class="menu__icon icon icon-list"></div><span>Жанри</span></a><a href="#" class="menu__item">
+          <div class="menu__icon icon icon-pencil"></div><span>Автори</span></a><a href="#" class="menu__item">
+          <div class="menu__icon icon icon-copy"></div><span>Новини</span></a><a href="#" class="menu__item">
+          <div class="menu__icon icon icon-gear"></div><span>Налаштування</span></a>
+      </nav>
       <!--END menu-->
       <div class="out">
         <!--BEGIN header-->
