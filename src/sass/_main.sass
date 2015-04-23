@@ -43,9 +43,10 @@
 .nav-btns
   margin-bottom: 30px
   .btn
-    margin-right: 10px
-  .btn + .btn
-    margin-top: 10px
+    margin: 0 10px 10px 0
+    vertical-align: top
+    &:last-child
+      margin-bottom: 0
 
 
 
@@ -241,3 +242,27 @@
 .form__footer
   text-align: center
   margin-top: 25px
+
+
+.alphabeth
+  margin: 0 0 35px
+  padding: 20px
+  font-size: 0
+  background: $gray
+  color: #88949C
+  border-radius: 5px
+
+.alphabeth__item
+  display: inline-block
+  vertical-align: top
+  width: percentage(35/245)
+  color: #88949C
+  font-size: 16px
+  line-height: 2.2
+  +bolder
+  text-decoration: none
+  text-align: center
+  > a
+    display: block
+    color: inherit
+    text-decoration: none

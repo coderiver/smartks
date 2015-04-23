@@ -46,6 +46,26 @@
   border-radius: 50%
   color: #434E55
 
+.hint
+  display: inline-block
+  background: $yellow
+  width: 14px
+  height: 14px
+  padding: 1px
+  box-sizing: border-box
+  border-radius: 50%
+  text-align: center
+  font-size: 11px
+  line-height: 14px
+  color: #3B4952
+  cursor: pointer
+  text-decoration: none
+  +bolder
+  &:before
+    display: inline-block
+    content: "?"
+    line-height: 1
+
 
 
 .btn
@@ -55,15 +75,17 @@
   padding: 0 29px
   box-sizing: border-box
   border-radius: 20px
-  background: #ECEEF0
+  background: $gray
   color: #88949C
   text-decoration: none
   text-align: center
   font-size: 14px
   +text-overflow
   +bold
+  +tap
   &:hover,
-  &:active
+  &:active,
+  &.is-active
     background: $blue
     color: #FFF
 
@@ -107,6 +129,11 @@ a.btn_border
 .btn_w200
   min-width: 200px
 
+.btn_fw
+  padding: 0
+  display: block
+  width: 100%
+
 
 
 .dropdown
@@ -148,18 +175,45 @@ a.btn_border
   font-size: 14px
   +bolder
   color: #8EA9B9
+  .hint
+    vertical-align: top
+    margin-left: 6px
 
 .field__input
   position: relative
 
 .field__row
-  margin-bottom: 11px
+  margin: 11px 0
   +clr
   .field__label
     display: inline-block
     margin: 0
   > .link
     float: right
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+.field__colbox
+  font-size: 0
+  margin: 0 -8px
+
+.field__col
+  display: inline-block
+  vertical-align: bottom
+  width: percentage(126/296)
+  box-sizing: border-box
+  padding: 0 8px
+  &:first-child,
+  &:last-child
+    width: percentage(85/296)
+
+.field__text
+  display: block
+  margin: 20px 0 13px
+  &:first-child
+    margin-top: 0
   &:last-child
     margin-bottom: 0
 
@@ -191,6 +245,13 @@ a.btn_border
       float: right
       width: percentage(190/280)
 
+.field_settings
+  & + &
+    margin-top: 40px
+  .field__label
+    margin-bottom: 18px
+
+
 
 .input
   display: block
@@ -211,6 +272,11 @@ a.btn_border
     line-height: normal
     color: rgba(#3B4952, 0.5)
 
+textarea.input
+  resize: vertical
+  min-height: 120px
+  max-height: 300px
+
 
 
 .title
@@ -220,6 +286,10 @@ a.btn_border
   line-height: 1.1
   color: #3B4952
   +bold
+
+.title_small
+  font-size: 20px
+  margin-bottom: 15px
 
 
 .link
@@ -243,7 +313,7 @@ a.btn_border
   display: inline-block
   height: 40px
   border-radius: 20px
-  background: #ECEEF0
+  background: $gray
   overflow: hidden
 
 .switch__btn
@@ -270,3 +340,65 @@ a.btn_border
   input:checked ~ span
     background: $blue
     color: #FFF
+
+
+
+.check-btn
+  display: inline-block
+  position: relative
+  font-size: 14px
+  color: #434E55
+  +bolder
+  &:hover
+    .check-btn__main:before
+      border-color: $blue
+      box-shadow: 0 0 7px rgba(0, 0, 0, 0.23)
+
+.check-btn__input
+  position: absolute
+  opacity: 0
+
+.check-btn__main
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  padding: 3px 0 3px 30px
+  box-sizing: border-box
+  line-height: 1.2
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+  &:before
+    top: 0
+    left: 0
+    width: 22px
+    height: 22px
+    box-sizing: border-box
+    border: 1px solid #CAD5DD
+    border-radius: 3px
+  &:after
+    @extend %icon
+    display: none
+    top: 6px
+    left: 4px
+    content: "\e60f"
+    color: $blue
+    font-size: 11px
+
+.check-btn__input:checked ~ .check-btn__main
+  &:after
+    display: block
+
+.check-btn_radio
+  .check-btn__main
+    &:before
+      border-radius: 50%
+    &:after
+      content: ""
+      top: 6px
+      left: 6px
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      background: $blue

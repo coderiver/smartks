@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+  </head>
+  <body>
+    <div style="text-align:center;margin:20px 0">
+      <button id="switch-view" type="btn" class="btn">Switch view</button>
+    </div>
+    <!--BEGIN out-->
+    <div id="screen-container">
+      <!--BEGIN menu-->
+      <nav class="menu">
+        <div class="menu__head">
+          <div class="menu__icon icon icon-planetary"></div>
+          <label for="lang" class="menu__label">Література видана:</label>
+          <div class="dropdown js-dd"><span class="dropdown__selected js-dd-selected">всіма мовами</span><i class="icon icon-bullet"></i>
+            <select name="lang" class="dropdown__select">
+              <option value="">всіма мовами</option>
+              <option value="">українська</option>
+              <option value="">російська</option>
+              <option value="">англійська</option>
+              <option value="">інша</option>
+            </select>
+          </div>
+        </div>
+        <ul class="menu__list">
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-logo"></div><span>Головна</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-book2"></div><span>Мої книжки</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-label"></div><span>Бестселери</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-down"></div><span>Новi надходження</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-list"></div><span>Жанри</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-pencil"></div><span>Автори</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-copy"></div><span>Новини</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-gear"></div><span>Налаштування</span></a></li>
+        </ul>
+      </nav>
+      <!--END menu-->
+      <div class="out">
+        <!--BEGIN header-->
+        <header class="header">
+          <div class="header__menu">
+            <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+          </div>
+          <div class="header__search">
+            <button type="button" class="search-btn"><i class="icon icon-search"></i></button>
+          </div>
+          <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
+        </header>
+        <!--END header-->
+        <div class="page-wrapper">
+          <h1 class="title">Налаштування</h1>
+          <nav class="nav-btns">
+            <button type="button" class="btn">Обліковий запис</button>
+            <button type="button" class="btn is-active">Особисті дані</button>
+            <button type="button" class="btn">Зворотній зв’язок</button>
+          </nav>
+          <form class="form">
+            <div class="field">
+              <label for="" class="field__label">Ім`я</label>
+              <input type="text" name="" class="input">
+            </div>
+            <div class="field">
+              <label for="" class="field__label">Прізвище</label>
+              <input type="text" name="" class="input">
+            </div>
+            <div class="field">
+              <label for="" class="field__label">По-батькові</label>
+              <input type="text" name="" class="input">
+            </div>
+            <div class="field">
+              <label for="" class="field__label">Місто</label>
+              <input type="text" name="" class="input">
+            </div>
+            <div class="field">
+              <label for="" class="field__label">E-mail</label>
+              <input type="email" name="" class="input">
+            </div>
+            <div class="field">
+              <label for="" class="field__label">Нікнейм</label>
+              <div class="field__row">
+                <input type="text" name="" class="input">
+              </div>
+              <div class="field__row">
+                <label class="check-btn">
+                  <input type="checkbox" name="" val="" class="check-btn__input"><span class="check-btn__main">Підписувати відгуки нікнеймом</span>
+                </label>
+              </div>
+            </div>
+            <div class="field">
+              <p class="field__text">Дата народження:</p>
+              <div class="field__colbox">
+                <div class="field__col">
+                  <label for="BD_DAY" class="field__label">День</label>
+                  <div class="field__input field__input_dd js-dd"><i class="icon icon-bullet"></i>
+                    <input type="text" readonly class="input js-dd-selected">
+                    <select name="BD_DAY"> 
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">08</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field__col">
+                  <label for="BD_MONTH" class="field__label">Місяць</label>
+                  <div class="field__input field__input_dd js-dd"><i class="icon icon-bullet"></i>
+                    <input type="text" readonly class="input js-dd-selected">
+                    <select name="BD_MONTH"> 
+                      <option value="01">Січень</option>
+                      <option value="02">Лютий</option>
+                      <option value="03">Березень</option>
+                      <option value="04">Квітень</option>
+                      <option value="05">Травень</option>
+                      <option value="06">Червень</option>
+                      <option value="07">Липень</option>
+                      <option value="08">Серпень</option>
+                      <option value="09">Вересень</option>
+                      <option value="10">Жовтень</option>
+                      <option value="11">Листопад</option>
+                      <option value="12">Грудень</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field__col">
+                  <label for="BD_YEAR" class="field__label">Рік</label>
+                  <div class="field__input field__input_dd js-dd"><i class="icon icon-bullet"></i>
+                    <input type="text" readonly class="input js-dd-selected">
+                    <select name="BD_YEAR"> 
+                      <option value="1980">1980</option>
+                      <option value="1981">1981</option>
+                      <option value="1983">1983</option>
+                      <option value="1984">1984</option>
+                      <option value="1985">1985</option>
+                      <option value="1986">1986</option>
+                      <option value="1987">1987</option>
+                      <option value="1988">1988</option>
+                      <option value="1989">1989</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn_yellow btn_last btn_w200">Зберегти налаштування</button>
+          </form>
+        </div>
+        <!--BEGIN footer-->
+        <footer class="footer">
+          <p class="footer__inner">
+            © 1998–2014 ПрАТ «Київстар» Всі права захищено. 
+            Використання матеріалів цього сайту можливе 
+            тільки з посиланням на джерело. 
+          </p>
+        </footer>
+        <!--END footer-->
+      </div>
+    </div>
+    <!--END out-->
+    <!--LOAD SCRIPTS-->
+    <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+  </body>
+</html>

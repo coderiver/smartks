@@ -1,0 +1,73 @@
+extends _layout
+
+block title
+  title Account
+
+block content
+
+  h1.title Налаштування
+
+  nav.nav-btns
+    button.btn.is-active(type="button") Обліковий запис
+    button.btn(type="button") Особисті дані
+    button.btn(type="button") Зворотній зв’язок
+
+  form.form
+    fieldset.field.field_settings
+      span.field__label
+        | Підписка:
+        i.hint
+      button.btn.btn_border.btn_fw(type="button") Скасувати підписку на книжки
+
+    fieldset.field.field_settings
+      span.field__label Мова iнтерфейсу:
+      .field__row
+        label.check-btn.check-btn_radio
+          input.check-btn__input(type="radio", name="LANG", val="UA", checked)
+          span.check-btn__main Українська
+      .field__row
+        label.check-btn.check-btn_radio
+          input.check-btn__input(type="radio", name="LANG", val="RUS")
+          span.check-btn__main Російська
+
+
+    fieldset.field.field_settings
+      span.field__label Налаштування сповіщень
+      p.field__text Повідомляти мені про:
+      .field__row
+        label.check-btn
+          input.check-btn__input(type="checkbox", name="", val="", checked)
+          span.check-btn__main Нове у моїх улюблених авторів та жанрах 
+      .field__row
+        label.check-btn
+          input.check-btn__input(type="checkbox", name="", val="")
+          span.check-btn__main Нові надходження асортименту 
+      .field__row
+        label.check-btn
+          input.check-btn__input(type="checkbox", name="", val="")
+          span.check-btn__main Нові функціонали послуги
+
+      p.field__text Повідомляти шляхом:
+      .field__row
+        label.check-btn
+          input.check-btn__input(type="checkbox", name="", val="", checked)
+          span.check-btn__main SMS  
+      .field__row
+        label.check-btn
+          input.check-btn__input(type="checkbox", name="", val="")
+          span.check-btn__main Email
+
+    fieldset.field.field_settings
+      span.field__label Налаштування відображення
+      .field__row
+        label.check-btn
+          input.check-btn__input(type="checkbox", name="", val="")
+          span.check-btn__main Відображати кнопку «Додати у «Мої книжки»
+
+    button.btn.btn_yellow.btn_last.btn_w200(type="submit") Зберегти налаштування
+
+
+
+
+
+  

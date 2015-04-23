@@ -22,6 +22,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+%icon {
+  font-family: 'icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-check:before {
+  content: "\e60f";
+}
+
 .icon-pencil:before {
   content: "\e60c";
 }

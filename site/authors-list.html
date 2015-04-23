@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Authors List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+  </head>
+  <body>
+    <div style="text-align:center;margin:20px 0">
+      <button id="switch-view" type="btn" class="btn">Switch view</button>
+    </div>
+    <!--BEGIN out-->
+    <div id="screen-container">
+      <!--BEGIN menu-->
+      <nav class="menu">
+        <div class="menu__head">
+          <div class="menu__icon icon icon-planetary"></div>
+          <label for="lang" class="menu__label">Література видана:</label>
+          <div class="dropdown js-dd"><span class="dropdown__selected js-dd-selected">всіма мовами</span><i class="icon icon-bullet"></i>
+            <select name="lang" class="dropdown__select">
+              <option value="">всіма мовами</option>
+              <option value="">українська</option>
+              <option value="">російська</option>
+              <option value="">англійська</option>
+              <option value="">інша</option>
+            </select>
+          </div>
+        </div>
+        <ul class="menu__list">
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-logo"></div><span>Головна</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-book2"></div><span>Мої книжки</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-label"></div><span>Бестселери</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-down"></div><span>Новi надходження</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-list"></div><span>Жанри</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-pencil"></div><span>Автори</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-copy"></div><span>Новини</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-gear"></div><span>Налаштування</span></a></li>
+        </ul>
+      </nav>
+      <!--END menu-->
+      <div class="out">
+        <!--BEGIN header-->
+        <header class="header">
+          <div class="header__menu">
+            <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+          </div>
+          <div class="header__search">
+            <button type="button" class="search-btn"><i class="icon icon-search"></i></button>
+          </div>
+          <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
+        </header>
+        <!--END header-->
+        <div class="page-wrapper">
+          <h1 class="title">Автори</h1>
+          <ul class="alphabeth">
+            <li class="alphabeth__item"><a href="#">A</a></li>
+            <li class="alphabeth__item"><a href="#">Б</a></li>
+            <li class="alphabeth__item"><a href="#">В</a></li>
+            <li class="alphabeth__item"><a href="#">Г</a></li>
+            <li class="alphabeth__item"><a href="#">Д</a></li>
+            <li class="alphabeth__item"><a href="#">Е</a></li>
+            <li class="alphabeth__item"><a href="#">Є</a></li>
+            <li class="alphabeth__item"><a href="#">Ж</a></li>
+            <li class="alphabeth__item"><a href="#">З</a></li>
+            <li class="alphabeth__item"><a href="#">И</a></li>
+            <li class="alphabeth__item"><a href="#">І</a></li>
+            <li class="alphabeth__item"><a href="#">Й</a></li>
+            <li class="alphabeth__item"><a href="#">К</a></li>
+            <li class="alphabeth__item"><a href="#">Л</a></li>
+            <li class="alphabeth__item"><a href="#">М</a></li>
+            <li class="alphabeth__item"><a href="#">Н</a></li>
+            <li class="alphabeth__item"><a href="#">О</a></li>
+            <li class="alphabeth__item"><a href="#">П</a></li>
+            <li class="alphabeth__item"><a href="#">Р</a></li>
+            <li class="alphabeth__item"><a href="#">С</a></li>
+            <li class="alphabeth__item"><a href="#">Т</a></li>
+            <li class="alphabeth__item"><a href="#">У</a></li>
+            <li class="alphabeth__item"><a href="#">Ф</a></li>
+            <li class="alphabeth__item"><a href="#">Х</a></li>
+            <li class="alphabeth__item"><a href="#">Ц</a></li>
+            <li class="alphabeth__item"><a href="#">Ч</a></li>
+            <li class="alphabeth__item"><a href="#">Ш</a></li>
+            <li class="alphabeth__item"><a href="#">Щ</a></li>
+            <li class="alphabeth__item"><a href="#">Ю</a></li>
+            <li class="alphabeth__item"><a href="#">Я</a></li>
+          </ul>
+          <h2 class="title title_small">Найпопулярніші</h2>
+          <div id="popular-authors">
+            <div class="book">
+              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="book__container"><strong class="book__title">Ліна Костенко</strong></div>
+            </div>
+            <div class="book">
+              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="book__container"><strong class="book__title">Оксана Забужко</strong></div>
+            </div>
+            <div class="book">
+              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="book__container"><strong class="book__title">Наталка Сняданко</strong></div>
+            </div>
+            <div class="book">
+              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="book__container"><strong class="book__title">Лариса Денисенко</strong></div>
+            </div>
+            <div class="book">
+              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="book__container"><strong class="book__title">Леся Українка</strong></div>
+            </div>
+            <div class="book">
+              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="book__container"><strong class="book__title">Юрій Андрухович</strong></div>
+            </div>
+            <div class="book">
+              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="book__container"><strong class="book__title">Сергій Жадан</strong></div>
+            </div>
+            <div class="book">
+              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="book__container"><strong class="book__title">Тарас Прохасько</strong></div>
+            </div>
+            <div class="book">
+              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="book__container"><strong class="book__title">Любко Дереш</strong></div>
+            </div>
+            <div class="book">
+              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="book__container"><strong class="book__title">Іван Франко</strong></div>
+            </div>
+          </div>
+        </div>
+        <!--BEGIN footer-->
+        <footer class="footer">
+          <p class="footer__inner">
+            © 1998–2014 ПрАТ «Київстар» Всі права захищено. 
+            Використання матеріалів цього сайту можливе 
+            тільки з посиланням на джерело. 
+          </p>
+        </footer>
+        <!--END footer-->
+      </div>
+    </div>
+    <!--END out-->
+    <!--LOAD SCRIPTS-->
+    <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+  </body>
+</html>

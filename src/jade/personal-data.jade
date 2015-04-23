@@ -1,0 +1,103 @@
+extends _layout
+
+block title
+  title Account
+
+block content
+
+  h1.title Налаштування
+
+  nav.nav-btns
+    button.btn(type="button") Обліковий запис
+    button.btn.is-active(type="button") Особисті дані
+    button.btn(type="button") Зворотній зв’язок
+
+  form.form
+    .field
+      label.field__label(for="") Ім`я
+      input.input(type="text", name="")
+
+    .field
+      label.field__label(for="") Прізвище
+      input.input(type="text", name="")
+
+    .field
+      label.field__label(for="") По-батькові
+      input.input(type="text", name="")
+
+    .field
+      label.field__label(for="") Місто
+      input.input(type="text", name="")
+
+    .field
+      label.field__label(for="") E-mail
+      input.input(type="email", name="")
+
+    .field
+      label.field__label(for="") Нікнейм
+      .field__row
+        input.input(type="text", name="")
+      .field__row
+        label.check-btn
+          input.check-btn__input(type="checkbox", name="", val="")
+          span.check-btn__main Підписувати відгуки нікнеймом
+
+    .field
+      p.field__text Дата народження:
+      .field__colbox
+        .field__col
+          label.field__label(for="BD_DAY") День
+          .field__input.field__input_dd.js-dd
+            i.icon.icon-bullet
+            input.input.js-dd-selected(type="text", readonly)
+            select(name="BD_DAY") 
+              option(value="01") 01
+              option(value="02") 02
+              option(value="03") 03
+              option(value="04") 04
+              option(value="05") 05
+              option(value="06") 06
+              option(value="07") 07
+              option(value="08") 08
+              option(value="09") 08
+        .field__col
+          label.field__label(for="BD_MONTH") Місяць
+          .field__input.field__input_dd.js-dd
+            i.icon.icon-bullet
+            input.input.js-dd-selected(type="text", readonly)
+            select(name="BD_MONTH") 
+              option(value="01") Січень
+              option(value="02") Лютий
+              option(value="03") Березень
+              option(value="04") Квітень
+              option(value="05") Травень
+              option(value="06") Червень
+              option(value="07") Липень
+              option(value="08") Серпень
+              option(value="09") Вересень
+              option(value="10") Жовтень
+              option(value="11") Листопад
+              option(value="12") Грудень
+        .field__col
+          label.field__label(for="BD_YEAR") Рік
+          .field__input.field__input_dd.js-dd
+            i.icon.icon-bullet
+            input.input.js-dd-selected(type="text", readonly)
+            select(name="BD_YEAR") 
+              option(value="1980") 1980
+              option(value="1981") 1981
+              option(value="1983") 1983
+              option(value="1984") 1984
+              option(value="1985") 1985
+              option(value="1986") 1986
+              option(value="1987") 1987
+              option(value="1988") 1988
+              option(value="1989") 1989
+
+    button.btn.btn_yellow.btn_last.btn_w200(type="submit") Зберегти налаштування
+
+
+
+
+
+  
