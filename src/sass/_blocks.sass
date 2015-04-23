@@ -83,13 +83,11 @@ a.btn_border
   padding: 0
   border-radius: 50%
 
-.btn_more
+.btn_last
   display: block
   margin: 30px auto 0
 
-.btn_read
-  padding: 0
-  width: 105px
+.btn_yellow
   background: $yellow
   color: #3B4952
   .icon
@@ -101,3 +99,174 @@ a.btn_border
   &:active
     background: darken($yellow, 3%)
     color: #3B4952
+
+.btn_w105
+  padding: 0
+  width: 105px
+
+.btn_w200
+  min-width: 200px
+
+
+
+.dropdown
+  display: inline-block
+  position: relative
+  padding-right: 22px
+  max-width: 100%
+  box-sizing: border-box
+  .icon
+    position: absolute
+    top: 50%
+    right: 0
+    margin-top: -6px
+
+.dropdown__select
+  position: absolute
+  z-index: 1
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  opacity: 0
+  -webkit-appearance: none
+
+.dropdown__selected
+  display: block
+  font-size: 14px
+  +bolder
+  +text-overflow
+
+
+.field
+  & + &
+    margin-top: 25px
+
+.field__label
+  display: block
+  margin-bottom: 11px
+  font-size: 14px
+  +bolder
+  color: #8EA9B9
+
+.field__input
+  position: relative
+
+.field__row
+  margin-bottom: 11px
+  +clr
+  .field__label
+    display: inline-block
+    margin: 0
+  > .link
+    float: right
+  &:last-child
+    margin-bottom: 0
+
+.field__input_dd
+  > .icon-bullet
+    position: absolute
+    top: 50%
+    right: 7px
+    transform: translateY(-50%)
+  > .input
+    padding-right: 24px
+
+  > select
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    opacity: 0
+    -webkit-appearance: none
+
+.field_tel
+  .field__input
+    &:first-child
+      float: left
+      width: percentage(75/280)
+    &:last-child
+      float: right
+      width: percentage(190/280)
+
+
+.input
+  display: block
+  box-sizing: border-box
+  width: 100%
+  padding: 9px 10px
+  height: 34px
+  background: #FFF
+  border: 1px solid #CAD5DD
+  border-radius: 5px
+  +bolder
+  font-size: 14px
+  line-height: 1
+  color: #3B4952
+  +placeholder
+    font-size: 14px
+    +bolder
+    line-height: normal
+    color: rgba(#3B4952, 0.5)
+
+
+
+.title
+  display: block
+  margin-bottom: 20px
+  font-size: 24px
+  line-height: 1.1
+  color: #3B4952
+  +bold
+
+
+.link
+  display: inline-block
+  +bolder
+  text-decoration: none
+  border-bottom: 1px dotted
+  &:hover,
+  &:active
+    border-bottom-color: transparent
+
+
+.switch-box
+  margin: 20px 0
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+.switch
+  display: inline-block
+  height: 40px
+  border-radius: 20px
+  background: #ECEEF0
+  overflow: hidden
+
+.switch__btn
+  display: inline-block
+  vertical-align: middle
+  height: 40px
+  position: relative
+  box-sizing: border-box
+  font-size: 14px
+  line-height: 40px
+  color: #88949C
+  +bolder
+  +tap
+  > input
+    position: absolute
+    opacity: 0
+  > span
+    display: inline-block
+    padding: 0 25px
+    box-sizing: border-box
+    width: 100%
+    height: 100%
+    border-radius: 20px
+  input:checked ~ span
+    background: $blue
+    color: #FFF

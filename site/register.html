@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Frontpage</title>
+    <title>Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -61,61 +61,26 @@
         </header>
         <!--END header-->
         <div class="page-wrapper">
-          <nav class="nav-btns">
-            <button type="button" class="btn">Бестселери</button>
-            <button type="button" class="btn">Новi надходження</button><a href="#" class="btn">Безкоштовнi</a><a href="#" class="btn">Аудіолітература</a>
-          </nav>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover1.jpg" alt=""></div>
-            <div class="book__container"><strong class="book__title">Мой друг Мегрэ</strong><span class="book__author">Жорж Сіменон</span>
-              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-                <button type="button" class="btn btn_border btn_circle">
-                  <div class="icon icon-book-plus"></div>
-                </button>
+          <h1 class="title">Реєстрація</h1>
+          <form class="form">
+            <div class="field field_tel">
+              <label class="field__label">Номер телефону:</label>
+              <div class="field__row">
+                <div class="field__input field__input_dd js-dd">
+                  <input type="text" name="PHONE_CODE" readonly value="067" class="input js-dd-selected"><i class="icon icon-bullet"></i>
+                  <select class="field__select">
+                    <option value="067">067</option>
+                    <option value="097">097</option>
+                    <option value="098">098</option>
+                  </select>
+                </div>
+                <div class="field__input">
+                  <input type="tel" name="PHONE_NUMBER" class="input">
+                </div>
               </div>
             </div>
-          </div>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover2.jpg" alt=""></div>
-            <div class="book__container"><strong class="book__title">Заколдованный замок. Сборник</strong><span class="book__author">Едґар Аллан По</span>
-              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-                <button type="button" class="btn btn_border btn_circle">
-                  <div class="icon icon-book-plus"></div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover3.jpg" alt=""></div>
-            <div class="book__container"><strong class="book__title">Сладкий плен его объятий</strong><span class="book__author">Олександра Хоукінз</span>
-              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-                <button type="button" class="btn btn_border btn_circle">
-                  <div class="icon icon-book-plus"></div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover4.jpg" alt=""></div>
-            <div class="book__container"><strong class="book__title">Сиротка. Расплата за прошлое</strong><span class="book__author">Марі-Бернадетт Дюпюї</span>
-              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-                <button type="button" class="btn btn_border btn_circle">
-                  <div class="icon icon-book-plus"></div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover5.jpg" alt=""></div>
-            <div class="book__container"><strong class="book__title">Тайные наслаждения</strong><span class="book__author">Джоржетт Хейєр</span>
-              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-                <button type="button" class="btn btn_border btn_circle">
-                  <div class="icon icon-book-plus"></div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <button tupe="button" class="btn btn_border btn_last">Показати ще</button>
+            <button type="submit" class="btn btn_yellow btn_w200 btn_last">Зареєструватись</button>
+          </form>
         </div>
         <!--BEGIN footer-->
         <footer class="footer">

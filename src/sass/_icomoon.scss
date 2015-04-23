@@ -22,6 +22,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pencil:before {
+  content: "\e60c";
+}
+
+.icon-bullet:before,
 .icon-arrow:before {
   content: "\e60e";
 }
@@ -48,10 +53,6 @@
 
 .icon-list:before {
   content: "\e60b";
-}
-
-.icon-pencil:before {
-  content: "\e60c";
 }
 
 .icon-planetary:before {

@@ -21,12 +21,14 @@ html
         block header
           include _header
         
-        block content
-        
+        .page-wrapper
+          block content
+          
         block footer
           include _footer
+        
+        block notice
     //END out
-
 
     //LOAD SCRIPTS
     script(src="js/lib/head.js" data-headjs-load="js/init.js")

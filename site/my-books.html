@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Install App</title>
+    <title>My Books</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -61,48 +61,55 @@
         </header>
         <!--END header-->
         <div class="page-wrapper">
-          <nav class="nav-btns">
-            <button type="button" class="btn">Бестселери</button>
-            <button type="button" class="btn">Новi надходження</button><a href="#" class="btn">Безкоштовнi</a><a href="#" class="btn">Аудіолітература</a>
-          </nav>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover1.jpg" alt=""></div><strong class="book__title">Мой друг Мегрэ</strong><span class="book__author">Жорж Сіменон</span>
-            <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-              <button type="button" class="btn btn_border btn_circle">
-                <div class="icon icon-book-plus"></div>
-              </button>
+          <h1 class="title">Мої книжки</h1>
+          <div class="switch-box">
+            <div class="switch">
+              <label class="switch__btn">
+                <input type="radio" name="BOOKS" value="all" checked><span>Всі</span>
+              </label>
+              <label class="switch__btn">
+                <input type="radio" name="BOOKS" value="fav"><span>Обрані</span>
+              </label>
+            </div>
+          </div>
+          <div class="field">
+            <label for="SORT" class="field__label">Сортувати за:</label>
+            <div class="field__input field__input_dd js-dd">
+              <input type="text" readonly value="Хронологією" class="input js-dd-selected"><i class="icon icon-bullet"></i>
+              <select name="SORT">
+                <option value="1">Хронологією</option>
+                <option value="2">Алфавітом</option>
+              </select>
             </div>
           </div>
           <div class="book">
-            <div class="book__cover"><img src="img/covers/cover2.jpg" alt=""></div><strong class="book__title">Заколдованный замок. Сборник</strong><span class="book__author">Едґар Аллан По</span>
-            <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-              <button type="button" class="btn btn_border btn_circle">
-                <div class="icon icon-book-plus"></div>
-              </button>
+            <div class="book__cover"><img src="img/covers/cover6.jpg" alt=""></div>
+            <div class="book__container"><strong class="book__title">Таємниця старої пекарні</strong><span class="book__author">Юрій Никитинський</span>
+              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
             </div>
           </div>
           <div class="book">
-            <div class="book__cover"><img src="img/covers/cover3.jpg" alt=""></div><strong class="book__title">Сладкий плен его объятий</strong><span class="book__author">Олександра Хоукінз</span>
-            <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-              <button type="button" class="btn btn_border btn_circle">
-                <div class="icon icon-book-plus"></div>
-              </button>
+            <div class="book__cover"><img src="img/covers/cover7.jpg" alt=""></div>
+            <div class="book__container"><strong class="book__title">Одолеть темноту</strong><span class="book__author">Ирэн Роздобудько</span>
+              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
             </div>
           </div>
           <div class="book">
-            <div class="book__cover"><img src="img/covers/cover4.jpg" alt=""></div><strong class="book__title">Сиротка. Расплата за прошлое</strong><span class="book__author">Марі-Бернадетт Дюпюї</span>
-            <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-              <button type="button" class="btn btn_border btn_circle">
-                <div class="icon icon-book-plus"></div>
-              </button>
+            <div class="book__cover"><img src="img/covers/cover8.jpg" alt=""></div>
+            <div class="book__container"><strong class="book__title">Поколение 700</strong><span class="book__author">Віктор Брагін</span>
+              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
             </div>
           </div>
           <div class="book">
-            <div class="book__cover"><img src="img/covers/cover5.jpg" alt=""></div><strong class="book__title">Тайные наслаждения</strong><span class="book__author">Джоржетт Хейєр</span>
-            <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-              <button type="button" class="btn btn_border btn_circle">
-                <div class="icon icon-book-plus"></div>
-              </button>
+            <div class="book__cover"><img src="img/covers/cover9.jpg" alt=""></div>
+            <div class="book__container"><strong class="book__title">Небесна сотня</strong><span class="book__author">Коллектив авторов</span>
+              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
+            </div>
+          </div>
+          <div class="book">
+            <div class="book__cover"><img src="img/covers/cover10.jpg" alt=""></div>
+            <div class="book__container"><strong class="book__title">Леопард</strong><span class="book__author">Ю Несбё</span>
+              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
             </div>
           </div>
           <button tupe="button" class="btn btn_border btn_last">Показати ще</button>
@@ -116,19 +123,6 @@
           </p>
         </footer>
         <!--END footer-->
-        <!--BEGIN notice-->
-        <div class="notice-box">
-          <div class="notice">
-            <button type="button" class="notice__close icon icon-close"></button>
-            <div class="notice__icon"><img src="img/app.svg" alt="" width="80" height="80"></div>
-            <p class="notice__text">
-              Встановіть застосунок Smart Kyivstar з Apple Store 
-              та користуйтесь нашою бібліотекою навіть без Інтернету.
-            </p>
-          </div>
-        </div>
-        <!--END notice-->
-        <div class="page-overlay"></div>
       </div>
     </div>
     <!--END out-->

@@ -1,0 +1,36 @@
+extends _layout
+
+block title
+  title Login
+
+block content
+  h1.title Увійти
+
+  form.form
+    p.form__text
+      Для того, щоб читати книжки, будь ласка, увійдіть до магазину.
+    .field.field_tel
+      label.field__label Номер телефону:
+      .field__row
+        .field__input.field__input_dd.js-dd
+          input.input.js-dd-selected(type="text", name="PHONE_CODE", readonly, value="067")
+          i.icon.icon-bullet
+          select.field__select
+            option(value="067") 067
+            option(value="097") 097
+            option(value="098") 098
+        .field__input
+          input.input(type="tel", name="PHONE_NUMBER")
+
+    .field
+      .field__row
+        label.field__label Пароль:
+        a.link(href="#") Відновлення паролю
+      .field__row
+        .field__input
+          input.input(type="password", name="PASSWORD")
+
+    button.btn.btn_yellow.btn_w200.btn_last(type="submit") Увійти
+
+    .form__footer
+      a.link(href="#") Реєстрація

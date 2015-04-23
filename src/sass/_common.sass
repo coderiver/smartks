@@ -27,30 +27,46 @@ $yellow: #FEDC00
 body
   font-size: 14px
   line-height: 1.2
-  +reg
+  background: #3B4952
+  color: #3B4952
+  +bolder
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  overflow-x: hidden
+  overflow-y: auto
 
 a
   color: $blue
 
 .out
+  position: relative
+  z-index: 1
   overflow: hidden
+  transition: transform 0.4s ease
+  background: #FFF
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+  .is-menu-open &
+    transform: translateX(87.5%)
 
 
 #screen-container
   width: 320px
   margin: 20px auto
-  min-height: 100%
+  // min-height: 100%
   box-shadow: 0 0 3px 0 lightblue
   position: relative
+  z-index: 0
+  overflow: hidden
   &.is-switched
     width: 335px
     height: 568px
     min-height: 0
     overflow-x: hidden
     overflow-y: auto
+    -webkit-overflow-scrolling: touch
 
-.main-wrapper
+.page-wrapper
   padding: 20px 20px 0
   position: relative
+  z-index: 1
+  background: #FFF

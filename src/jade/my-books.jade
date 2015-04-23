@@ -1,0 +1,82 @@
+extends _layout
+
+block title
+  title My Books
+
+block content
+  h1.title Мої книжки
+
+  .switch-box
+    .switch
+      label.switch__btn
+        input(type="radio", name="BOOKS", value="all", checked)
+        span Всі
+      label.switch__btn
+        input(type="radio", name="BOOKS", value="fav")
+        span Обрані
+
+  .field
+    label.field__label(for="SORT") Сортувати за:
+    .field__input.field__input_dd.js-dd
+      input.input.js-dd-selected(type="text", readonly, value="Хронологією")
+      i.icon.icon-bullet
+      select(name="SORT")
+        option(value="1") Хронологією
+        option(value="2") Алфавітом
+
+  .book
+    .book__cover
+      img(src="img/covers/cover6.jpg", alt="")
+    .book__container
+      strong.book__title Таємниця старої пекарні
+      span.book__author Юрій Никитинський
+      .book__action
+        a.btn.btn_yellow.btn_w105(href="#")
+          i.icon.icon-book
+          |  Читати
+
+  .book
+    .book__cover
+      img(src="img/covers/cover7.jpg", alt="")
+    .book__container
+      strong.book__title Одолеть темноту
+      span.book__author Ирэн Роздобудько
+      .book__action
+        a.btn.btn_yellow.btn_w105(href="#")
+          i.icon.icon-book
+          |  Читати
+
+  .book
+    .book__cover
+      img(src="img/covers/cover8.jpg", alt="")
+    .book__container
+      strong.book__title Поколение 700
+      span.book__author Віктор Брагін
+      .book__action
+        a.btn.btn_yellow.btn_w105(href="#")
+          i.icon.icon-book
+          |  Читати
+
+  .book
+    .book__cover
+      img(src="img/covers/cover9.jpg", alt="")
+    .book__container
+      strong.book__title Небесна сотня
+      span.book__author Коллектив авторов
+      .book__action
+        a.btn.btn_yellow.btn_w105(href="#")
+          i.icon.icon-book
+          |  Читати
+
+  .book
+    .book__cover
+      img(src="img/covers/cover10.jpg", alt="")
+    .book__container
+      strong.book__title Леопард
+      span.book__author Ю Несбё
+      .book__action
+        a.btn.btn_yellow.btn_w105(href="#")
+          i.icon.icon-book
+          |  Читати
+
+  button.btn.btn_border.btn_last(tupe="button") Показати ще
