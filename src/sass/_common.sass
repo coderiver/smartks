@@ -9,19 +9,19 @@ $gray: #ECEEF0
 
 =light
   font-family: "MuseoSansCyrl-100", Helvetica, Arial, sans-serif
-  font-style: normal
+  font-weight: normal
 
 =reg
   font-family: "MuseoSansCyrl-300", Helvetica, Arial, sans-serif
-  font-style: normal
+  font-weight: normal
 
 =bolder
   font-family: "MuseoSansCyrl-500", Helvetica, Arial, sans-serif
-  font-style: normal
+  font-weight: normal
 
 =bold
   font-family: "MuseoSansCyrl-700", Helvetica, Arial, sans-serif
-  font-style: normal
+  font-weight: normal
 
 
 body
@@ -70,3 +70,19 @@ a
   position: relative
   z-index: 1
   background: #FFF
+
+
+.page-overlay
+  position: absolute
+  z-index: 98
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: #40484D
+  transition: all 0.2s linear
+  visibility: hidden
+  opacity: 0
+  &.is-visible
+    opacity: 0.9
+    visibility: visible

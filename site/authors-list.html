@@ -51,13 +51,19 @@
       <div class="out">
         <!--BEGIN header-->
         <header class="header">
-          <div class="header__menu">
-            <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+          <div class="header__inner">
+            <div class="header__menu">
+              <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+            </div>
+            <div class="header__search">
+              <button type="button" class="search-btn"><i class="icon icon-search"></i><i class="icon icon-close2"></i></button>
+            </div>
+            <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
           </div>
-          <div class="header__search">
-            <button type="button" class="search-btn"><i class="icon icon-search"></i></button>
-          </div>
-          <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
+          <form class="search">
+            <input type="text" name="SEARCH" class="search__input">
+            <button type="submit" class="search__button"><i class="icon icon-search"></i></button>
+          </form>
         </header>
         <!--END header-->
         <div class="page-wrapper">
@@ -95,46 +101,28 @@
             <li class="alphabeth__item"><a href="#">Я</a></li>
           </ul>
           <h2 class="title title_small">Найпопулярніші</h2>
-          <div id="popular-authors">
-            <div class="book">
-              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
-              <div class="book__container"><strong class="book__title">Ліна Костенко</strong></div>
-            </div>
-            <div class="book">
-              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
-              <div class="book__container"><strong class="book__title">Оксана Забужко</strong></div>
-            </div>
-            <div class="book">
-              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
-              <div class="book__container"><strong class="book__title">Наталка Сняданко</strong></div>
-            </div>
-            <div class="book">
-              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
-              <div class="book__container"><strong class="book__title">Лариса Денисенко</strong></div>
-            </div>
-            <div class="book">
-              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
-              <div class="book__container"><strong class="book__title">Леся Українка</strong></div>
-            </div>
-            <div class="book">
-              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
-              <div class="book__container"><strong class="book__title">Юрій Андрухович</strong></div>
-            </div>
-            <div class="book">
-              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
-              <div class="book__container"><strong class="book__title">Сергій Жадан</strong></div>
-            </div>
-            <div class="book">
-              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
-              <div class="book__container"><strong class="book__title">Тарас Прохасько</strong></div>
-            </div>
-            <div class="book">
-              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
-              <div class="book__container"><strong class="book__title">Любко Дереш</strong></div>
-            </div>
-            <div class="book">
-              <div class="book__cover"><img src="http://placehold.it/200x200" alt=""></div>
-              <div class="book__container"><strong class="book__title">Іван Франко</strong></div>
+          <div id="popular-authors"><a href="#" class="b">
+              <div class="b__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="b__container"><strong class="b__title">Ліна Костенко</strong></div></a><a href="#" class="b">
+              <div class="b__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="b__container"><strong class="b__title">Оксана Забужко</strong></div></a><a href="#" class="b">
+              <div class="b__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="b__container"><strong class="b__title">Наталка Сняданко</strong></div></a><a href="#" class="b">
+              <div class="b__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="b__container"><strong class="b__title">Лариса Денисенко</strong></div></a><a href="#" class="b">
+              <div class="b__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="b__container"><strong class="b__title">Леся Українка</strong></div></a><a href="#" class="b">
+              <div class="b__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="b__container"><strong class="b__title">Юрій Андрухович</strong></div></a><a href="#" class="b">
+              <div class="b__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="b__container"><strong class="b__title">Сергій Жадан</strong></div></a><a href="#" class="b">
+              <div class="b__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="b__container"><strong class="b__title">Тарас Прохасько</strong></div></a><a href="#" class="b">
+              <div class="b__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="b__container"><strong class="b__title">Любко Дереш</strong></div></a>
+            <div class="b">
+              <div class="b__cover"><img src="http://placehold.it/200x200" alt=""></div>
+              <div class="b__container"><a href="#" class="b__title">Іван Франко</a></div>
             </div>
           </div>
         </div>
@@ -147,6 +135,7 @@
           </p>
         </footer>
         <!--END footer-->
+        <div class="page-overlay"></div>
       </div>
     </div>
     <!--END out-->

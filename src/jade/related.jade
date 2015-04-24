@@ -1,0 +1,102 @@
+extends _layout
+
+block title
+  title Related
+
+block content
+  
+  h1.title Зажигая звезду. История «Киевстар» от первого лица
+
+  .b.b_expanded
+    .b__author
+      a(href="#") Ігор Литовченко
+    .b__cover
+      img(src="img/covers/cover11.jpg", alt="")
+    .b__container
+      p Жанр: <a href="#">Публіцистика, Біографії і автобіографії</a>
+      p Рік: 2012
+      p Видавництво: <a href="#">ПрАТ "Київстар"</a> 
+    .b__action
+      a.btn.btn_yellow.btn_w105(href="#")
+        i.icon.icon-book
+        |  Читати
+      button.btn.btn_border.btn_circle.is-active(type="button")
+        .icon.icon-book-plus
+      button.btn.btn_border.btn_circle(type="button")
+        .icon.icon-heart
+
+  .switch.switch_fw
+    a(href="#").switch__btn
+      //- input(type="radio", name="BOOKS", val="" checked)
+      span Анотація
+    a(href="#").switch__btn
+      //- input(type="radio", name="BOOKS", val="")
+      span Відгуки
+    a(href="#").switch__btn.is-active
+      //- input(type="radio", name="BOOKS", val="")
+      span Подібні
+
+  .b
+    .b__cover
+      img(src="img/covers/cover1.jpg", alt="")
+    .b__container
+      strong.b__title Мой друг Мегрэ
+      span.b__author Жорж Сіменон
+      .b__action
+        a.btn.btn_yellow.btn_w105(href="#")
+          i.icon.icon-book
+          |  Читати
+        button.btn.btn_border.btn_circle(type="button")
+          .icon.icon-book-plus
+
+  .b
+    .b__cover
+      img(src="img/covers/cover2.jpg", alt="")
+    .b__container
+      strong.b__title Заколдованный замок. Сборник
+      span.b__author Едґар Аллан По
+      .b__action
+        a.btn.btn_yellow.btn_w105(href="#")
+          i.icon.icon-book
+          |  Читати
+        button.btn.btn_border.btn_circle(type="button")
+          .icon.icon-book-plus
+
+  .b
+    .b__cover
+      img(src="img/covers/cover3.jpg", alt="")
+    .b__container
+      strong.b__title Сладкий плен его объятий
+      span.b__author Олександра Хоукінз
+      .b__action
+        a.btn.btn_yellow.btn_w105(href="#")
+          i.icon.icon-book
+          |  Читати
+        button.btn.btn_border.btn_circle(type="button")
+          .icon.icon-book-plus
+
+  .b
+    .b__cover
+      img(src="img/covers/cover4.jpg", alt="")
+    .b__container
+      strong.b__title Сиротка. Расплата за прошлое
+      span.b__author Марі-Бернадетт Дюпюї
+      .b__action
+        a.btn.btn_yellow.btn_w105(href="#")
+          i.icon.icon-book
+          |  Читати
+        button.btn.btn_border.btn_circle(type="button")
+          .icon.icon-book-plus
+
+  .b
+    .b__cover
+      img(src="img/covers/cover5.jpg", alt="")
+    .b__container
+      strong.b__title Тайные наслаждения
+      span.b__author Джоржетт Хейєр
+      .b__action
+        a.btn.btn_yellow.btn_w105(href="#")
+          i.icon.icon-book
+          |  Читати
+        button.btn.btn_border.btn_circle(type="button")
+          .icon.icon-book-plus

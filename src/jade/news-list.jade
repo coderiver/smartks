@@ -1,0 +1,45 @@
+extends _layout
+
+block title
+  title News List
+
+block content
+
+  h1.title Новини
+
+  .news
+    .news__pic
+      img(src="img/news/news1.jpg", alt="")
+    strong.news__title Талант та завзятість
+    span.news__date 8 місяців тому
+    a.news__more(href="#") Читати далі
+
+  .news
+    .news__pic
+      img(src="img/news/news2.jpg", alt="")
+    strong.news__title Змінити майбутнє
+    span.news__date 9 місяців тому
+    a.news__more(href="#") Читати далі
+
+  .news
+    .news__pic
+      img(src="img/news/news3.jpg", alt="")
+    strong.news__title Так казав Кокотюха
+    span.news__date 10 місяців тому
+    a.news__more(href="#") Читати далі
+
+  .news
+    .news__pic
+      img(src="img/news/news4.jpg", alt="")
+    strong.news__title Щодо критичного мислення
+    span.news__date 11 місяців тому
+    a.news__more(href="#") Читати далі
+
+  a(href="#").news
+    .news__pic
+      img(src="img/news/news5.jpg", alt="")
+    strong.news__title Про перемогу
+    span.news__date 11 місяців тому
+    .news__more Читати далі
+
+  button.btn.btn_border.btn_last(type="button") Показати ще

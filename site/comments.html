@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Comments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+  </head>
+  <body>
+    <div style="text-align:center;margin:20px 0">
+      <button id="switch-view" type="btn" class="btn">Switch view</button>
+    </div>
+    <!--BEGIN out-->
+    <div id="screen-container">
+      <!--BEGIN menu-->
+      <nav class="menu">
+        <div class="menu__head">
+          <div class="menu__icon icon icon-planetary"></div>
+          <label for="lang" class="menu__label">Література видана:</label>
+          <div class="dropdown js-dd"><span class="dropdown__selected js-dd-selected">всіма мовами</span><i class="icon icon-bullet"></i>
+            <select name="lang" class="dropdown__select">
+              <option value="">всіма мовами</option>
+              <option value="">українська</option>
+              <option value="">російська</option>
+              <option value="">англійська</option>
+              <option value="">інша</option>
+            </select>
+          </div>
+        </div>
+        <ul class="menu__list">
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-logo"></div><span>Головна</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-book2"></div><span>Мої книжки</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-label"></div><span>Бестселери</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-down"></div><span>Новi надходження</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-list"></div><span>Жанри</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-pencil"></div><span>Автори</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-copy"></div><span>Новини</span></a></li>
+          <li><a href="#" class="menu__item">
+              <div class="menu__icon icon icon-gear"></div><span>Налаштування</span></a></li>
+        </ul>
+      </nav>
+      <!--END menu-->
+      <div class="out">
+        <!--BEGIN header-->
+        <header class="header">
+          <div class="header__inner">
+            <div class="header__menu">
+              <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+            </div>
+            <div class="header__search">
+              <button type="button" class="search-btn"><i class="icon icon-search"></i><i class="icon icon-close2"></i></button>
+            </div>
+            <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
+          </div>
+          <form class="search">
+            <input type="text" name="SEARCH" class="search__input">
+            <button type="submit" class="search__button"><i class="icon icon-search"></i></button>
+          </form>
+        </header>
+        <!--END header-->
+        <div class="page-wrapper">
+          <h1 class="title">Зажигая звезду. История «Киевстар» от первого лица</h1>
+          <div class="b b_expanded">
+            <div class="b__author"><a href="#">Ігор Литовченко</a></div>
+            <div class="b__cover"><img src="img/covers/cover11.jpg" alt=""></div>
+            <div class="b__container">
+              <p>Жанр: <a href="#">Публіцистика, Біографії і автобіографії</a></p>
+              <p>Рік: 2012</p>
+              <p>Видавництво: <a href="#">ПрАТ "Київстар"</a> </p>
+            </div>
+            <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
+              <button type="button" class="btn btn_border btn_circle">
+                <div class="icon icon-book-plus"></div>
+              </button>
+              <button type="button" class="btn btn_border btn_circle">
+                <div class="icon icon-heart"></div>
+              </button>
+            </div>
+          </div>
+          <div class="switch switch_fw"><a href="#" class="switch__btn"><span>Анотація</span></a><a href="#" class="switch__btn is-active"><span>Відгуки</span></a><a href="#" class="switch__btn"><span>Подібні</span></a></div>
+          <div class="comments-container">
+            <div class="comment">
+              <div class="comment__header"><a href="#" class="comment__author">A.V.</a><span class="comment__date">28.01.2015 </span></div>
+              <div class="comment__text">
+                <p>хорошая!</p>
+              </div>
+              <div class="comment__footer">
+                <div class="rating"><span class="rating__label">Корисність відгуку</span><span class="rating__counter">1</span>
+                  <button type="button" class="rating__btn icon icon-plus"></button>
+                  <button type="button" class="rating__btn icon icon-minus"></button>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="comment__header"><span class="comment__author">Користувач</span><span class="comment__date">15.12.2013</span></div>
+              <div class="comment__text">
+                <p>Мне понравило рекоминдую всем</p>
+              </div>
+              <div class="comment__footer">
+                <div class="rating"><span class="rating__label">Корисність відгуку</span><span class="rating__counter">2</span>
+                  <button type="button" class="rating__btn icon icon-plus"></button>
+                  <button type="button" class="rating__btn icon icon-minus"></button>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <div class="comment__header"><a href="#" class="comment__author">WebSales.com.ua</a><span class="comment__date">15.12.2013</span></div>
+              <div class="comment__text">
+                <p>Прочитал книгу на одном дыхании, с первой до последней страницы.</p>
+                <p>
+                  Мотивом для прочтения книги стал интерес узнать больше о компании, 
+                  услугами которой пользуюсь уже почти 10 лет и надолго еще останусь ее лояльным клиентом. 
+                </p>
+                <p>
+                  После прочтения книги, осознал что получил от нее больше чем ожидал: 
+                  кроме истории создания и развития компании, выделил для себя много моментов, 
+                  которые буду моделировать и внедрять в своем бизнесе. 
+                </p>
+              </div>
+              <div class="comment__footer">
+                <div class="rating"><span class="rating__label">Корисність відгуку</span><span class="rating__counter">2</span>
+                  <button type="button" class="rating__btn icon icon-plus"></button>
+                  <button type="button" class="rating__btn icon icon-minus"></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <form class="form">
+            <div class="field">
+              <label for="" class="field__label">Ваш відгук</label>
+              <textarea name="" class="input"></textarea>
+            </div>
+            <button type="buton" class="btn btn_yellow btn_last">Опублiкувати</button>
+          </form>
+        </div>
+        <!--BEGIN footer-->
+        <footer class="footer">
+          <p class="footer__inner">
+            © 1998–2014 ПрАТ «Київстар» Всі права захищено. 
+            Використання матеріалів цього сайту можливе 
+            тільки з посиланням на джерело. 
+          </p>
+        </footer>
+        <!--END footer-->
+        <div class="page-overlay"></div>
+      </div>
+    </div>
+    <!--END out-->
+    <!--LOAD SCRIPTS-->
+    <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+  </body>
+</html>

@@ -51,13 +51,19 @@
       <div class="out">
         <!--BEGIN header-->
         <header class="header">
-          <div class="header__menu">
-            <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+          <div class="header__inner">
+            <div class="header__menu">
+              <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+            </div>
+            <div class="header__search">
+              <button type="button" class="search-btn"><i class="icon icon-search"></i><i class="icon icon-close2"></i></button>
+            </div>
+            <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
           </div>
-          <div class="header__search">
-            <button type="button" class="search-btn"><i class="icon icon-search"></i></button>
-          </div>
-          <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
+          <form class="search">
+            <input type="text" name="SEARCH" class="search__input">
+            <button type="submit" class="search__button"><i class="icon icon-search"></i></button>
+          </form>
         </header>
         <!--END header-->
         <div class="page-wrapper">
@@ -91,6 +97,7 @@
           </p>
         </footer>
         <!--END footer-->
+        <div class="page-overlay"></div>
       </div>
     </div>
     <!--END out-->

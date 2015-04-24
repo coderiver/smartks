@@ -51,13 +51,19 @@
       <div class="out">
         <!--BEGIN header-->
         <header class="header">
-          <div class="header__menu">
-            <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+          <div class="header__inner">
+            <div class="header__menu">
+              <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+            </div>
+            <div class="header__search">
+              <button type="button" class="search-btn"><i class="icon icon-search"></i><i class="icon icon-close2"></i></button>
+            </div>
+            <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
           </div>
-          <div class="header__search">
-            <button type="button" class="search-btn"><i class="icon icon-search"></i></button>
-          </div>
-          <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
+          <form class="search">
+            <input type="text" name="SEARCH" class="search__input">
+            <button type="submit" class="search__button"><i class="icon icon-search"></i></button>
+          </form>
         </header>
         <!--END header-->
         <div class="page-wrapper">
@@ -82,34 +88,34 @@
               </select>
             </div>
           </div>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover6.jpg" alt=""></div>
-            <div class="book__container"><strong class="book__title">Таємниця старої пекарні</strong><span class="book__author">Юрій Никитинський</span>
-              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
+          <div class="b">
+            <div class="b__cover"><img src="img/covers/cover6.jpg" alt=""></div>
+            <div class="b__container"><strong class="b__title">Таємниця старої пекарні</strong><span class="b__author">Юрій Никитинський</span>
+              <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
             </div>
           </div>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover7.jpg" alt=""></div>
-            <div class="book__container"><strong class="book__title">Одолеть темноту</strong><span class="book__author">Ирэн Роздобудько</span>
-              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
+          <div class="b">
+            <div class="b__cover"><img src="img/covers/cover7.jpg" alt=""></div>
+            <div class="b__container"><strong class="b__title">Одолеть темноту</strong><span class="b__author">Ирэн Роздобудько</span>
+              <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
             </div>
           </div>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover8.jpg" alt=""></div>
-            <div class="book__container"><strong class="book__title">Поколение 700</strong><span class="book__author">Віктор Брагін</span>
-              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
+          <div class="b">
+            <div class="b__cover"><img src="img/covers/cover8.jpg" alt=""></div>
+            <div class="b__container"><strong class="b__title">Поколение 700</strong><span class="b__author">Віктор Брагін</span>
+              <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
             </div>
           </div>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover9.jpg" alt=""></div>
-            <div class="book__container"><strong class="book__title">Небесна сотня</strong><span class="book__author">Коллектив авторов</span>
-              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
+          <div class="b">
+            <div class="b__cover"><img src="img/covers/cover9.jpg" alt=""></div>
+            <div class="b__container"><strong class="b__title">Небесна сотня</strong><span class="b__author">Коллектив авторов</span>
+              <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
             </div>
           </div>
-          <div class="book">
-            <div class="book__cover"><img src="img/covers/cover10.jpg" alt=""></div>
-            <div class="book__container"><strong class="book__title">Леопард</strong><span class="book__author">Ю Несбё</span>
-              <div class="book__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
+          <div class="b">
+            <div class="b__cover"><img src="img/covers/cover10.jpg" alt=""></div>
+            <div class="b__container"><strong class="b__title">Леопард</strong><span class="b__author">Ю Несбё</span>
+              <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a></div>
             </div>
           </div>
           <button tupe="button" class="btn btn_border btn_last">Показати ще</button>
@@ -123,6 +129,7 @@
           </p>
         </footer>
         <!--END footer-->
+        <div class="page-overlay"></div>
       </div>
     </div>
     <!--END out-->

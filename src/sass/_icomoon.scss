@@ -34,6 +34,34 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-fb:before {
+  content: "\e612";
+}
+
+.icon-tw:before {
+  content: "\e613";
+}
+
+.icon-vk:before {
+  content: "\e614";
+}
+
+.icon-plus:before {
+  content: "\e040";
+}
+
+.icon-minus:before {
+  content: "\e041";
+}
+
+.icon-close2:before {
+  content: "\e611";
+}
+
+.icon-heart:before {
+  content: "\e610";
+}
+
 .icon-check:before {
   content: "\e60f";
 }

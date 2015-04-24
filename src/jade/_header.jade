@@ -1,12 +1,19 @@
 //BEGIN header
 header.header
-  .header__menu
-    button.menu-btn(type="button")
-      i.icon.icon-menu
-  .header__search
-    button.search-btn(type="button")
+  .header__inner
+    .header__menu
+      button.menu-btn(type="button")
+        i.icon.icon-menu
+    .header__search
+      button.search-btn(type="button")
+        i.icon.icon-search
+        i.icon.icon-close2
+    .header__logo
+      a.ks-logo(href="/")
+        i.icon.icon-logo
+
+  form.search
+    input.search__input(type="text", name="SEARCH")
+    button.search__button(type="submit")
       i.icon.icon-search
-  .header__logo
-    a.ks-logo(href="/")
-      i.icon.icon-logo
 //END header
