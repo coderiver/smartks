@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Book Reading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
+  </head>
+  <body>
+    <!--BEGIN out-->
+    <!--BEGIN menu-->
+    <nav class="menu">
+      <div class="menu__head">
+        <div class="menu__icon icon icon-planetary"></div>
+        <label for="lang" class="menu__label">Література видана:</label>
+        <div class="dropdown js-dd"><span class="dropdown__selected js-dd-selected">всіма мовами</span><i class="icon icon-bullet"></i>
+          <select name="lang" class="dropdown__select">
+            <option value="">всіма мовами</option>
+            <option value="">українська</option>
+            <option value="">російська</option>
+            <option value="">англійська</option>
+            <option value="">інша</option>
+          </select>
+        </div>
+      </div>
+      <ul class="menu__list">
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-logo"></div><span>Головна</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-book2"></div><span>Мої книжки</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-label"></div><span>Бестселери</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-down"></div><span>Новi надходження</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-list"></div><span>Жанри</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-pencil"></div><span>Автори</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-copy"></div><span>Новини</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-gear"></div><span>Налаштування</span></a></li>
+      </ul>
+    </nav>
+    <!--END menu-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header header_light">
+        <div class="header__inner">
+          <div class="header__menu">
+            <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+          </div>
+          <div class="header__search">
+            <button type="button" class="settings-btn"><i class="icon icon-gear"></i></button>
+          </div>
+          <div class="header__center">
+            <div class="header__center-inner">
+              <div class="book-heading"><strong class="book-heading__name">Зажигая звезду. История «Киевстар» от первого лица</strong><span class="book-heading__author">Ігор Литовченко</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="settings">
+          <ol class="settings__inner">
+            <li class="settings__item"><a href="#">Налаштування</a></li>
+            <li class="settings__item"><a href="#">На іншу сторінку</a></li>
+            <li class="settings__item"><a href="#">Читати далі</a></li>
+            <li class="settings__item"><a href="#">До обкладинки</a></li>
+            <li class="settings__item"><a href="#">Додати закладку</a></li>
+            <li class="settings__item"><a href="#">Зміст книжки</a></li>
+            <li class="settings__item"><a href="#">Цитати та закладки</a></li>
+            <li class="settings__item"><a href="#">Пошук слова</a></li>
+          </ol>
+        </div>
+      </header>
+      <!--END header-->
+      <div class="book-page-wrapper">
+        <div class="book-text">
+          <h3>Глава 3</h3>
+          <h1>ЭПОХА ПЕРВОНАЧАЛЬНОГО НАКОПЛЕНИЯ</h1>
+          <p><strong>
+              Глава о Perestroike и «лихих девяностых»,из которой можно узнать (или вспомнить), 
+              что такое «куклы», «стрелки» и «терки»; а также почерпнуть информацию о том, 
+              почему иногда полезно разбираться в исторических процессах и дружить с госорганами.
+              </strong></p>
+          <p>
+            Телеком был далеко не первым моим бизнесом. 
+            Когда я заканчивал университет и осваивал предпринимательство, 
+            в сфере связи царила государственная монополия. Никто не думал, 
+            что на этом можно зарабатывать. Я занимался всем, что могло принести 
+            прибыль - автоперевозками, торговлей оргтехникой и цветными металлами, 
+            продуктами питания и т. д.
+            
+          </p>
+        </div>
+      </div>
+      <!--BEGIN footer-->
+      <div class="paginator">
+        <div class="paginator__inner">
+          <button type="button" class="paginator__prev icon icon-arrow"></button>
+          <div class="paginator__current"><b>11</b> з <b>89</b></div>
+          <button type="button" class="paginator__next icon icon-arrow"></button>
+        </div>
+      </div>
+      <!--END footer-->
+      <div class="page-overlay"></div>
+    </div>
+    <!--END out-->
+    <!--LOAD SCRIPTS-->
+    <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
+  </body>
+</html>

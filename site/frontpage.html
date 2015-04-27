@@ -8,132 +8,129 @@
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   </head>
   <body>
-    <div style="text-align:center;margin:20px 0">
-      <button id="switch-view" type="btn" class="btn">Switch view</button>
-    </div>
     <!--BEGIN out-->
-    <div id="screen-container">
-      <!--BEGIN menu-->
-      <nav class="menu">
-        <div class="menu__head">
-          <div class="menu__icon icon icon-planetary"></div>
-          <label for="lang" class="menu__label">Література видана:</label>
-          <div class="dropdown js-dd"><span class="dropdown__selected js-dd-selected">всіма мовами</span><i class="icon icon-bullet"></i>
-            <select name="lang" class="dropdown__select">
-              <option value="">всіма мовами</option>
-              <option value="">українська</option>
-              <option value="">російська</option>
-              <option value="">англійська</option>
-              <option value="">інша</option>
-            </select>
-          </div>
+    <!--BEGIN menu-->
+    <nav class="menu">
+      <div class="menu__head">
+        <div class="menu__icon icon icon-planetary"></div>
+        <label for="lang" class="menu__label">Література видана:</label>
+        <div class="dropdown js-dd"><span class="dropdown__selected js-dd-selected">всіма мовами</span><i class="icon icon-bullet"></i>
+          <select name="lang" class="dropdown__select">
+            <option value="">всіма мовами</option>
+            <option value="">українська</option>
+            <option value="">російська</option>
+            <option value="">англійська</option>
+            <option value="">інша</option>
+          </select>
         </div>
-        <ul class="menu__list">
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-logo"></div><span>Головна</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-book2"></div><span>Мої книжки</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-label"></div><span>Бестселери</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-down"></div><span>Новi надходження</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-list"></div><span>Жанри</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-pencil"></div><span>Автори</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-copy"></div><span>Новини</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-gear"></div><span>Налаштування</span></a></li>
-        </ul>
-      </nav>
-      <!--END menu-->
-      <div class="out">
-        <!--BEGIN header-->
-        <header class="header">
-          <div class="header__inner">
-            <div class="header__menu">
-              <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
-            </div>
-            <div class="header__search">
-              <button type="button" class="search-btn"><i class="icon icon-search"></i><i class="icon icon-close2"></i></button>
-            </div>
-            <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
-          </div>
-          <form class="search">
-            <input type="text" name="SEARCH" class="search__input">
-            <button type="submit" class="search__button"><i class="icon icon-search"></i></button>
-          </form>
-        </header>
-        <!--END header-->
-        <div class="page-wrapper">
-          <nav class="nav-btns">
-            <button type="button" class="btn is-active">Бестселери</button>
-            <button type="button" class="btn">Новi надходження</button><a href="#" class="btn">Безкоштовнi</a><a href="#" class="btn">Аудіолітература</a>
-          </nav>
-          <div class="b">
-            <div class="b__cover"><img src="img/covers/cover1.jpg" alt=""></div>
-            <div class="b__container"><strong class="b__title">Мой друг Мегрэ</strong><span class="b__author">Жорж Сіменон</span>
-              <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-                <button type="button" class="btn btn_border btn_circle">
-                  <div class="icon icon-book-plus"></div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="b">
-            <div class="b__cover"><img src="img/covers/cover2.jpg" alt=""></div>
-            <div class="b__container"><strong class="b__title">Заколдованный замок. Сборник</strong><span class="b__author">Едґар Аллан По</span>
-              <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-                <button type="button" class="btn btn_border btn_circle">
-                  <div class="icon icon-book-plus"></div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="b">
-            <div class="b__cover"><img src="img/covers/cover3.jpg" alt=""></div>
-            <div class="b__container"><strong class="b__title">Сладкий плен его объятий</strong><span class="b__author">Олександра Хоукінз</span>
-              <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-                <button type="button" class="btn btn_border btn_circle">
-                  <div class="icon icon-book-plus"></div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="b">
-            <div class="b__cover"><img src="img/covers/cover4.jpg" alt=""></div>
-            <div class="b__container"><strong class="b__title">Сиротка. Расплата за прошлое</strong><span class="b__author">Марі-Бернадетт Дюпюї</span>
-              <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-                <button type="button" class="btn btn_border btn_circle">
-                  <div class="icon icon-book-plus"></div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="b">
-            <div class="b__cover"><img src="img/covers/cover5.jpg" alt=""></div>
-            <div class="b__container"><strong class="b__title">Тайные наслаждения</strong><span class="b__author">Джоржетт Хейєр</span>
-              <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
-                <button type="button" class="btn btn_border btn_circle">
-                  <div class="icon icon-book-plus"></div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <button tupe="button" class="btn btn_border btn_last">Показати ще</button>
-        </div>
-        <!--BEGIN footer-->
-        <footer class="footer">
-          <p class="footer__inner">
-            © 1998–2014 ПрАТ «Київстар» Всі права захищено. 
-            Використання матеріалів цього сайту можливе 
-            тільки з посиланням на джерело. 
-          </p>
-        </footer>
-        <!--END footer-->
-        <div class="page-overlay"></div>
       </div>
+      <ul class="menu__list">
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-logo"></div><span>Головна</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-book2"></div><span>Мої книжки</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-label"></div><span>Бестселери</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-down"></div><span>Новi надходження</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-list"></div><span>Жанри</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-pencil"></div><span>Автори</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-copy"></div><span>Новини</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-gear"></div><span>Налаштування</span></a></li>
+      </ul>
+    </nav>
+    <!--END menu-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__menu">
+            <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+          </div>
+          <div class="header__search">
+            <button type="button" class="search-btn"><i class="icon icon-search"></i><i class="icon icon-close2"></i></button>
+          </div>
+          <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
+        </div>
+        <form class="search">
+          <input type="text" name="SEARCH" class="search__input">
+          <button type="submit" class="search__button"><i class="icon icon-search"></i></button>
+        </form>
+      </header>
+      <!--END header-->
+      <!--BEGIN page-wrapper-->
+      <div class="page-wrapper">
+        <nav class="nav-btns">
+          <button type="button" class="btn is-active">Бестселери</button>
+          <button type="button" class="btn">Новi надходження</button><a href="#" class="btn">Безкоштовнi</a><a href="#" class="btn">Аудіолітература</a>
+        </nav>
+        <div class="b">
+          <div class="b__cover"><img src="img/covers/cover1.jpg" alt=""></div>
+          <div class="b__container"><strong class="b__title">Мой друг Мегрэ</strong><span class="b__author">Жорж Сіменон</span>
+            <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
+              <button type="button" class="btn btn_border btn_circle">
+                <div class="icon icon-book-plus"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="b">
+          <div class="b__cover"><img src="img/covers/cover2.jpg" alt=""></div>
+          <div class="b__container"><strong class="b__title">Заколдованный замок. Сборник</strong><span class="b__author">Едґар Аллан По</span>
+            <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
+              <button type="button" class="btn btn_border btn_circle">
+                <div class="icon icon-book-plus"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="b">
+          <div class="b__cover"><img src="img/covers/cover3.jpg" alt=""></div>
+          <div class="b__container"><strong class="b__title">Сладкий плен его объятий</strong><span class="b__author">Олександра Хоукінз</span>
+            <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
+              <button type="button" class="btn btn_border btn_circle">
+                <div class="icon icon-book-plus"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="b">
+          <div class="b__cover"><img src="img/covers/cover4.jpg" alt=""></div>
+          <div class="b__container"><strong class="b__title">Сиротка. Расплата за прошлое</strong><span class="b__author">Марі-Бернадетт Дюпюї</span>
+            <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
+              <button type="button" class="btn btn_border btn_circle">
+                <div class="icon icon-book-plus"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="b">
+          <div class="b__cover"><img src="img/covers/cover5.jpg" alt=""></div>
+          <div class="b__container"><strong class="b__title">Тайные наслаждения</strong><span class="b__author">Джоржетт Хейєр</span>
+            <div class="b__action"><a href="#" class="btn btn_yellow btn_w105"><i class="icon icon-book"></i> Читати</a>
+              <button type="button" class="btn btn_border btn_circle">
+                <div class="icon icon-book-plus"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button tupe="button" class="btn btn_border btn_last">Показати ще</button>
+      </div>
+      <!--END page-wrapper-->
+      <!--BEGIN footer-->
+      <footer class="footer">
+        <p class="footer__inner">
+          © 1998–2014 ПрАТ «Київстар» Всі права захищено. 
+          Використання матеріалів цього сайту можливе 
+          тільки з посиланням на джерело. 
+        </p>
+      </footer>
+      <!--END footer-->
+      <div class="page-overlay"></div>
     </div>
     <!--END out-->
     <!--LOAD SCRIPTS-->

@@ -1,27 +1,186 @@
 head.ready(function() {
 
+        var menuBtn     = $('.menu-btn'),
+            body        = $('body'),
+            pageOverlay = $('.page-overlay'),
+            dropdown    = $('.js-dd'),
+            searchBtn   = $('.search-btn'),
+            settingsBtn = $('.settings-btn');
+
+
         $('#switch-view').on('click', function() {
             $('#screen-container').toggleClass('is-switched');
         });
 
-        $('.menu-btn').on('click', function(event) {
+        var menu = {
+            visible        :  false,
+            element        : $('.menu'),
+            container      : body,
+            className      : 'is-menu-open',
+            show: function() {
+                this.visible = true;
+                this.element.show();
+                this.container.addClass(this.className);
+            },
+            hide: function() {
+                this.container.removeClass(this.className);
+                setTimeout(function() {
+                    this.element.hide();
+                    this.visible = false;
+                }.bind(this), 400);
+            },
+            toggle: function() {
+                if ( this.visible ) {
+                    this.hide();
+                } else {
+                    this.show();
+                }
+            }
+        };
+
+        var overlay = {
+
+            visible   : false,
+            className : "is-visible",
+            element   : pageOverlay,
+            show: function() {
+                if ( !this.visible ) {
+                    this.element.show();
+                    setTimeout(function() {
+                        this.element.addClass(this.className);
+                    }.bind(this), 10);
+                    this.visible = true;
+                }
+            },
+            hide: function() {
+                if ( this.visible ) {
+                    this.element.removeClass(this.className);
+                    setTimeout(function() {
+                        this.element.hide();
+                        this.visible = false;
+                    }.bind(this), 350);
+                }
+            },
+            toggle: function() {
+                if ( this.visible ) {
+                    this.hide();
+                } else {
+                    this.show();
+                }
+            }
+
+        };
+
+        var search = {
+            visible   : false,
+            className : "is-visible",
+            element   : $('.search'),
+            show: function() {
+                this.visible = true;
+                this.element.addClass(this.className);
+            },
+            hide: function() {
+                this.element.removeClass(this.className);
+                this.visible = false;
+            },
+            toggle: function() {
+                if ( this.visible ) {
+                    this.hide();
+                } else {
+                    this.show();
+                }
+            }
+        };
+
+        var settings = {
+            visible   : false,
+            className : "is-visible",
+            element   : $('.settings'),
+            show: function() {
+                this.visible = true;
+                this.element.show();
+                setTimeout(function() {
+                    this.element.addClass(this.className);
+                }.bind(this), 10);
+            },
+            hide: function() {
+                this.element.removeClass(this.className);
+                setTimeout(function() {
+                    this.element.hide();
+                    this.visible = false;
+                }.bind(this), 350);
+            },
+            toggle: function() {
+                if ( this.visible ) {
+                    this.hide();
+                } else {
+                    this.show();
+                }
+            }
+        };
+
+
+        menuBtn.on('click', function(event) {
             event.preventDefault();
             event.stopPropagation();
-            $('body').addClass('is-menu-open');
-            overlay.show();
-            $('.out').triggerHandler('menu-open');
+            menu.toggle();
+            overlay.toggle();
+            pageOverlay.trigger('menu-open');
         });
 
-        $('.out').bind('menu-open', function(event) {
-            $(this).bind('click', function() {
-                 $('body').removeClass('is-menu-open');
+        pageOverlay.bind('menu-open', function() {
+            pageOverlay.bind('click', function() {
+                 menu.hide();
                  overlay.hide();
-                 $(this).unbind('click');
+                 pageOverlay.unbind('click');
             });
         });
 
-        if ($('.js-dd').length) {
-            $('.js-dd').each(function() {
+        searchBtn.on('click', function(event) {
+            event.preventDefault();
+            search.toggle();
+            overlay.toggle();
+            pageOverlay.trigger('search-open');
+        });
+
+        pageOverlay.bind('search-open', function() {
+            pageOverlay.bind('click', function() {
+                 search.hide();
+                 overlay.hide();
+                 pageOverlay.unbind('click');
+            });
+        });
+
+        settingsBtn.on('click', function() {
+            settings.toggle();
+            overlay.toggle();
+        });
+
+        // var Dropdown = function(element) {
+        //     this.element  = $(this);
+        //     this.selected = this.element.find('.js-dd-selected');
+        //     this.select   = this.element.find('select');
+        // };
+
+        // Dropdown.prototype.setSelected = function() {
+        //     var text = this.element.find('select option:selected').text();
+        //     if ( selected[0].tagName == 'INPUT' ) {
+        //         selected.val(text);
+        //         selected.change();
+        //     } else {
+        //         selected.text(text);
+        //     }
+        // };
+
+        // Dropdown.prototype.init = function() {
+        //     this.setSelected();
+        //     this.select.on('change', function() {
+        //         this.setSelected();
+        //     });
+        // };
+
+        if ( dropdown.length ) {
+            dropdown.each(function() {
                 var drop     = $(this),
                     selected = drop.find('.js-dd-selected');
                     select   = drop.find('select');
@@ -43,39 +202,6 @@ head.ready(function() {
                 });
             });
         }
-
-        var overlay = {
-
-            isVisible :  false,
-            className : "is-visible",
-            element   : $('.page-overlay'),
-            show: function() {
-                if ( !this.isVisible ) {
-                    this.element.addClass(this.className);
-                    this.isVisible = true;
-                }
-            },
-            hide: function() {
-                if ( this.isVisible ) {
-                    this.element.removeClass(this.className);
-                    this.isVisible = false;
-                }
-            },
-            toggle: function() {
-                if ( this.isVisible ) {
-                    this.hide();
-                } else {
-                    this.show();
-                }
-            }
-
-        };
-
-        $('.header .search-btn').on('click', function(event) {
-            event.preventDefault();
-            $('.header .search').toggleClass('is-visible');
-            overlay.toggle();
-        });
 
         //accordion
         (function() {
@@ -116,4 +242,5 @@ head.ready(function() {
             }
 
         })();
+
 });

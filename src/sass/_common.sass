@@ -6,6 +6,8 @@ $gray: #ECEEF0
 +font("MuseoSansCyrl-300", museosanscyrl_300)
 +font("MuseoSansCyrl-500", museosanscyrl_500)
 +font("MuseoSansCyrl-700", museosanscyrl_700)
++font("PTSerif-Regular", ptf55f)
++font("PTSerif-Bold", ptf75f)
 
 =light
   font-family: "MuseoSansCyrl-100", Helvetica, Arial, sans-serif
@@ -23,8 +25,19 @@ $gray: #ECEEF0
   font-family: "MuseoSansCyrl-700", Helvetica, Arial, sans-serif
   font-weight: normal
 
+=ptr
+  font-family: "PTSerif-Regular", Helvetica, Arial, sans-serif
+  font-weight: normal
+
+=ptb
+  font-family: "PTSerif-Bold", Helvetica, Arial, sans-serif
+  font-weight: normal
+
 
 body
+  position: relative
+  z-index: 0
+  min-width: 320px
   font-size: 14px
   line-height: 1.2
   background: #3B4952
@@ -32,15 +45,16 @@ body
   +bolder
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  overflow-x: hidden
-  overflow-y: auto
+  &.is-menu-open
+    overflow: hidden
 
 a
   color: $blue
 
 .out
   position: relative
-  z-index: 1
+  z-index: 2
+  min-height: 100%
   overflow: hidden
   transition: transform 0.4s ease
   background: #FFF
@@ -50,8 +64,8 @@ a
 
 
 #screen-container
-  width: 320px
-  margin: 20px auto
+  // width: 320px
+  // margin: 20px auto
   // min-height: 100%
   box-shadow: 0 0 3px 0 lightblue
   position: relative
@@ -70,7 +84,11 @@ a
   position: relative
   z-index: 1
   background: #FFF
+  min-height: 100%
 
+.book-page-wrapper
+  padding: 20px 20px 60px
+  background: #FFF
 
 .page-overlay
   position: absolute
@@ -81,8 +99,9 @@ a
   bottom: 0
   background: #40484D
   transition: all 0.2s linear
-  visibility: hidden
-  opacity: 0
+  // visibility: hidden
+  opacity: 0.1
+  display: none
   &.is-visible
     opacity: 0.9
-    visibility: visible
+    // visibility: visible

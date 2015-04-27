@@ -25,20 +25,25 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 @font-face { font-family: "MuseoSansCyrl-300"; src: url("../fonts/museosanscyrl_300.eot"); src: url("../fonts/museosanscyrl_300.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_300.woff") format("woff"), url("../fonts/museosanscyrl_300.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "MuseoSansCyrl-500"; src: url("../fonts/museosanscyrl_500.eot"); src: url("../fonts/museosanscyrl_500.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_500.woff") format("woff"), url("../fonts/museosanscyrl_500.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 @font-face { font-family: "MuseoSansCyrl-700"; src: url("../fonts/museosanscyrl_700.eot"); src: url("../fonts/museosanscyrl_700.eot?#iefix") format("embedded-opentype"), url("../fonts/museosanscyrl_700.woff") format("woff"), url("../fonts/museosanscyrl_700.ttf") format("truetype"); font-weight: normal; font-style: normal; }
-body { font-size: 14px; line-height: 1.2; background: #3B4952; color: #3B4952; font-family: "MuseoSansCyrl-500", Helvetica, Arial, sans-serif; font-weight: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; overflow-y: auto; }
+@font-face { font-family: "PTSerif-Regular"; src: url("../fonts/ptf55f.eot"); src: url("../fonts/ptf55f.eot?#iefix") format("embedded-opentype"), url("../fonts/ptf55f.woff") format("woff"), url("../fonts/ptf55f.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: "PTSerif-Bold"; src: url("../fonts/ptf75f.eot"); src: url("../fonts/ptf75f.eot?#iefix") format("embedded-opentype"), url("../fonts/ptf75f.woff") format("woff"), url("../fonts/ptf75f.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { position: relative; z-index: 0; min-width: 320px; font-size: 14px; line-height: 1.2; background: #3B4952; color: #3B4952; font-family: "MuseoSansCyrl-500", Helvetica, Arial, sans-serif; font-weight: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body.is-menu-open { overflow: hidden; }
 
 a { color: #109DFF; }
 
-.out { position: relative; z-index: 1; overflow: hidden; -webkit-transition: -webkit-transform 0.4s ease; transition: transform 0.4s ease; background: #FFF; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+.out { position: relative; z-index: 2; min-height: 100%; overflow: hidden; -webkit-transition: -webkit-transform 0.4s ease; transition: transform 0.4s ease; background: #FFF; box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
 .is-menu-open .out { -webkit-transform: translateX(87.5%); -ms-transform: translateX(87.5%); transform: translateX(87.5%); }
 
-#screen-container { width: 320px; margin: 20px auto; box-shadow: 0 0 3px 0 lightblue; position: relative; z-index: 0; overflow: hidden; }
+#screen-container { box-shadow: 0 0 3px 0 lightblue; position: relative; z-index: 0; overflow: hidden; }
 #screen-container.is-switched { width: 335px; height: 568px; min-height: 0; overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 
-.page-wrapper { padding: 20px 20px 0; position: relative; z-index: 1; background: #FFF; }
+.page-wrapper { padding: 20px 20px 0; position: relative; z-index: 1; background: #FFF; min-height: 100%; }
 
-.page-overlay { position: absolute; z-index: 98; top: 0; left: 0; right: 0; bottom: 0; background: #40484D; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; visibility: hidden; opacity: 0; }
-.page-overlay.is-visible { opacity: 0.9; visibility: visible; }
+.book-page-wrapper { padding: 20px 20px 60px; background: #FFF; }
+
+.page-overlay { position: absolute; z-index: 98; top: 0; left: 0; right: 0; bottom: 0; background: #40484D; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; opacity: 0.1; display: none; }
+.page-overlay.is-visible { opacity: 0.9; }
 
 @font-face { font-family: 'icons'; src: url("../fonts/icons.eot?-x11b1z"); src: url("../fonts/icons.eot?#iefix-x11b1z") format("embedded-opentype"), url("../fonts/icons.woff?-x11b1z") format("woff"), url("../fonts/icons.ttf?-x11b1z") format("truetype"), url("../fonts/icons.svg?-x11b1z#icons") format("svg"); font-weight: normal; font-style: normal; }
 .icon { display: inline-block; font-family: 'icons'; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -91,17 +96,21 @@ a { color: #109DFF; }
 
 .icon-menu:before { content: "\e604"; }
 
-.ks-logo { display: inline-block; vertical-align: top; font-size: 46px; line-height: 1; color: #FFF; }
+.ks-logo { display: inline-block; vertical-align: top; font-size: 46px; line-height: 1; color: inherit; }
 .ks-logo .icon { vertical-align: top; }
 
-.menu-btn { width: 46px; height: 46px; line-height: 46px; background: none; font-size: 19px; color: #FFF; }
-.menu-btn .icon { vertical-align: middle; position: relative; top: -3px; }
+.menu-btn, .search-btn, .settings-btn { width: 46px; height: 46px; line-height: 46px; background: none; font-size: 19px; color: inherit; }
 
-.search-btn { width: 46px; height: 46px; line-height: 46px; background: none; font-size: 19px; color: #FFF; position: relative; }
+.menu-btn .icon-menu { vertical-align: middle; position: relative; top: -3px; }
+
+.search-btn { position: relative; }
 .search-btn .icon-search { vertical-align: middle; position: relative; top: -3px; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .search-btn .icon-close2 { visibility: hidden; position: absolute; top: 50%; left: 0; right: 0; text-align: center; font-size: 15px; margin-top: -7px; -webkit-transition: all 0.2s linear; transition: all 0.2s linear; }
 .search-btn.is-active .icon-close2 { visibility: visible; }
 .search-btn.is-active .icon-search { visibility: hidden; }
+
+.settings-btn .icon-gear { font-size: 24px; vertical-align: middle; position: relative; top: -2px; }
+.settings-btn.is-active { color: #109DFF; }
 
 .icon-book-plus { font-size: 18px; }
 
@@ -232,6 +241,22 @@ textarea.input { resize: vertical; min-height: 120px; max-height: 300px; }
 .soc-btn.icon-vk { color: #3177A4; font-size: 12px; }
 .soc-btn:hover { background: #e6e9f2; }
 
+.paginator { position: absolute; bottom: 0; left: 0; right: 0; padding: 10px; text-align: center; color: #3B4952; font-size: 14px; white-space: nowrap; }
+
+.paginator__inner { display: inline-block; }
+
+.paginator__prev, .paginator__next { display: inline-block; vertical-align: middle; background: #FEDC00; width: 30px; height: 30px; text-align: center; border-radius: 50%; color: #4C5A63; }
+.paginator__prev:before, .paginator__next:before { display: inline-block; line-height: 1; }
+
+.paginator__prev:before { -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
+
+.paginator__next:before { -webkit-transform: rotate(-90deg); -ms-transform: rotate(-90deg); transform: rotate(-90deg); }
+
+a.paginator__btn { line-height: 30px; }
+
+.paginator__current { display: inline-block; vertical-align: middle; margin: 0 5px; }
+.paginator__current b, .paginator__current strong { display: inline-block; min-width: 25px; text-align: center; font-family: "MuseoSansCyrl-700", Helvetica, Arial, sans-serif; font-weight: normal; }
+
 .header { position: relative; z-index: 99; height: 80px; color: #FFF; }
 
 .header__inner { position: relative; padding: 17px 7px; box-sizing: border-box; z-index: 2; height: 100%; background: #109DFF; *zoom: 1; }
@@ -243,6 +268,14 @@ textarea.input { resize: vertical; min-height: 120px; max-height: 300px; }
 
 .header__logo { text-align: center; font-size: 0; }
 
+.header__center { position: absolute; top: 10px; bottom: 10px; left: 55px; right: 55px; text-align: center; font-size: 0; overflow: hidden; }
+.header__center:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+
+.header__center-inner { display: inline-block; vertical-align: middle; }
+
+.header_light { color: #88949C; }
+.header_light .header__inner { background: #F7F8FB; }
+
 .search { visibility: hidden; position: absolute; z-index: 1; top: 0; left: 0; right: 0; padding: 30px 20px 10px; color: #FFF; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 .search.is-visible { -webkit-transform: translateY(80px); -ms-transform: translateY(80px); transform: translateY(80px); visibility: visible; }
 
@@ -250,8 +283,20 @@ textarea.input { resize: vertical; min-height: 120px; max-height: 300px; }
 
 .search__button { position: absolute; top: 30px; right: 5px; font-size: 19px; color: #FFF; background: none; height: 48px; width: 48px; -webkit-tap-highlight-color: transparent; }
 
+.settings { position: absolute; z-index: 100; top: 100%; left: 0; right: 0; list-style-type: decimal; color: #3B4952; font-size: 16px; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1); -webkit-transition: all 0.2s linear; transition: all 0.2s linear; display: none; -webkit-transform: scale(1, 0); -ms-transform: scale(1, 0); transform: scale(1, 0); -webkit-transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; -webkit-transform-origin: 95% 0; -ms-transform-origin: 95% 0; transform-origin: 95% 0; }
+.settings:before { content: ""; position: absolute; z-index: 0; top: -7px; right: 23px; width: 14px; height: 14px; background: #FFF; box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1); -webkit-transform: rotate(-45deg) skew(4deg, 4deg); -ms-transform: rotate(-45deg) skew(4deg, 4deg); transform: rotate(-45deg) skew(4deg, 4deg); }
+.settings a { text-decoration: none; }
+.settings a:hover, .settings a:active { text-decoration: underline; }
+.settings.is-visible { -webkit-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1); }
+
+.settings__inner { position: relative; z-index: 1; padding: 35px; background: #FFF; list-style-type: decimal; }
+
+.settings__item { margin-left: 25px; }
+.settings__item + .settings__item { margin-top: 20px; }
+
 .footer { height: 100px; padding: 20px 25px; margin-top: 55px; box-sizing: border-box; background: #F7F8FB; font-family: "MuseoSansCyrl-500", Helvetica, Arial, sans-serif; font-weight: normal; color: #B4B7BB; font-size: 0; }
 .footer:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+.page-wrapper .footer { position: absolute; z-index: 1; bottom: 0; left: 0; right: 0; }
 
 .footer__inner { display: inline-block; vertical-align: middle; font-size: 11px; }
 
@@ -261,6 +306,7 @@ textarea.input { resize: vertical; min-height: 120px; max-height: 300px; }
 
 .b { display: block; position: relative; margin: 20px 0; padding: 0 0 20px; border-bottom: 1px solid #DDDFE1; text-decoration: none; font-size: 14px; *zoom: 1; }
 .b:after { content: " "; display: table; clear: both; }
+.b:last-child { margin-bottom: 0; }
 
 .b__cover { float: left; width: 110px; overflow: hidden; }
 .b__cover img { display: block; max-width: 100%; }
@@ -304,7 +350,7 @@ textarea.input { resize: vertical; min-height: 120px; max-height: 300px; }
 .notice__close { position: absolute; height: 40px; width: 40px; top: 12px; right: 4px; background: none; text-align: center; line-height: 40px; font-size: 10px; color: #109DFF; }
 .notice__close:hover, .notice__close:active { color: #FEDC00; }
 
-.menu { position: absolute; z-index: 0; top: 0; left: 0; bottom: 0; right: 12.5%; padding-top: 80px; height: 100%; box-sizing: border-box; background: #3B4952; color: #FFF; }
+.menu { display: none; position: fixed; z-index: 0; top: 0; left: 0; right: 12.5%; padding-top: 80px; height: 100%; box-sizing: border-box; background: #3B4952; color: #FFF; overflow: auto; }
 .menu .dropdown { color: #F7F8FB; }
 
 .menu__head { position: absolute; z-index: 1; top: 0; left: 0; right: 0; height: 80px; padding: 20px 10px 10px 70px; background: #263138; box-sizing: border-box; color: #A2B0B8; }
@@ -425,6 +471,18 @@ a.news__more:hover { text-decoration: underline; }
 .accordion__title:hover > span, .accordion__item.is-active .accordion__title > span { border-color: transparent; }
 
 .accordion__content { display: none; margin: 20px 0 0 -20px; }
+
+.book-heading { color: #3B4952; font-size: 14px; line-height: 1.3; }
+
+.book-heading__name { display: block; font-family: "MuseoSansCyrl-700", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.book-heading__author { display: block; margin-top: 5px; }
+
+.book-text { font-size: 16px; line-height: 1.3; color: #333; text-align: justify; font-family: "PTSerif-Regular", Helvetica, Arial, sans-serif; font-weight: normal; }
+.book-text p, .book-text h1, .book-text h1, .book-text h3, .book-text h4, .book-text h5, .book-text h6 { margin: 20px 0; }
+.book-text p:first-child, .book-text h1:first-child, .book-text h1:first-child, .book-text h3:first-child, .book-text h4:first-child, .book-text h5:first-child, .book-text h6:first-child { margin-top: 0; }
+.book-text p:last-child { margin-bottom: 0; }
+.book-text h1, .book-text h1, .book-text h3, .book-text h4, .book-text h5, .book-text h6 { text-align: center; font-size: 16px; font-family: "PTSerif-Bold", Helvetica, Arial, sans-serif; font-weight: normal; }
 
 
 

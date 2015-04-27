@@ -8,134 +8,131 @@
     <link rel="stylesheet" media="all" href="css/screen.css"><!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
   </head>
   <body>
-    <div style="text-align:center;margin:20px 0">
-      <button id="switch-view" type="btn" class="btn">Switch view</button>
-    </div>
     <!--BEGIN out-->
-    <div id="screen-container">
-      <!--BEGIN menu-->
-      <nav class="menu">
-        <div class="menu__head">
-          <div class="menu__icon icon icon-planetary"></div>
-          <label for="lang" class="menu__label">Література видана:</label>
-          <div class="dropdown js-dd"><span class="dropdown__selected js-dd-selected">всіма мовами</span><i class="icon icon-bullet"></i>
-            <select name="lang" class="dropdown__select">
-              <option value="">всіма мовами</option>
-              <option value="">українська</option>
-              <option value="">російська</option>
-              <option value="">англійська</option>
-              <option value="">інша</option>
-            </select>
-          </div>
+    <!--BEGIN menu-->
+    <nav class="menu">
+      <div class="menu__head">
+        <div class="menu__icon icon icon-planetary"></div>
+        <label for="lang" class="menu__label">Література видана:</label>
+        <div class="dropdown js-dd"><span class="dropdown__selected js-dd-selected">всіма мовами</span><i class="icon icon-bullet"></i>
+          <select name="lang" class="dropdown__select">
+            <option value="">всіма мовами</option>
+            <option value="">українська</option>
+            <option value="">російська</option>
+            <option value="">англійська</option>
+            <option value="">інша</option>
+          </select>
         </div>
-        <ul class="menu__list">
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-logo"></div><span>Головна</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-book2"></div><span>Мої книжки</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-label"></div><span>Бестселери</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-down"></div><span>Новi надходження</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-list"></div><span>Жанри</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-pencil"></div><span>Автори</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-copy"></div><span>Новини</span></a></li>
-          <li><a href="#" class="menu__item">
-              <div class="menu__icon icon icon-gear"></div><span>Налаштування</span></a></li>
-        </ul>
-      </nav>
-      <!--END menu-->
-      <div class="out">
-        <!--BEGIN header-->
-        <header class="header">
-          <div class="header__inner">
-            <div class="header__menu">
-              <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
-            </div>
-            <div class="header__search">
-              <button type="button" class="search-btn"><i class="icon icon-search"></i><i class="icon icon-close2"></i></button>
-            </div>
-            <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
-          </div>
-          <form class="search">
-            <input type="text" name="SEARCH" class="search__input">
-            <button type="submit" class="search__button"><i class="icon icon-search"></i></button>
-          </form>
-        </header>
-        <!--END header-->
-        <div class="page-wrapper">
-          <h1 class="title">Жанри</h1>
-          <ul class="list">
-            <li><a href="#" class="list__item">Шкільна програма</a></li>
-            <li><a href="#" class="list__item">Фентезі</a></li>
-            <li><a href="#" class="list__item">Фантастика</a></li>
-            <li><a href="#" class="list__item">Філософія</a></li>
-            <li><a href="#" class="list__item">Українська класика</a></li>
-            <li><a href="#" class="list__item">Трилери</a></li>
-            <li><a href="#" class="list__item">Технології</a></li>
-            <li><a href="#" class="list__item">Східна література</a></li>
-            <li><a href="#" class="list__item">Сучасна українська література</a></li>
-            <li><a href="#" class="list__item">Сучасна російська література</a></li>
-            <li><a href="#" class="list__item">Сучасна проза</a></li>
-            <li><a href="#" class="list__item">Стиль життя</a></li>
-            <li><a href="#" class="list__item">Світова література</a></li>
-            <li><a href="#" class="list__item">Світова кухня</a></li>
-            <li><a href="#" class="list__item">Російська класика</a></li>
-            <li><a href="#" class="list__item">Релігія</a></li>
-            <li><a href="#" class="list__item">Публіцистика</a></li>
-            <li><a href="#" class="list__item">Психологія</a></li>
-            <li><a href="#" class="list__item">Пригодницька література</a></li>
-            <li><a href="#" class="list__item">Практичні вміння</a></li>
-            <li><a href="#" class="list__item">Політичний трилер</a></li>
-            <li><a href="#" class="list__item">Політика</a></li>
-            <li><a href="#" class="list__item">Поезія</a></li>
-            <li><a href="#" class="list__item">Підліткова література</a></li>
-            <li><a href="#" class="list__item">Оповідання</a></li>
-            <li><a href="#" class="list__item">Огляди бізнес-книжок</a></li>
-            <li><a href="#" class="list__item">Медицина та здоров'я</a></li>
-            <li><a href="#" class="list__item">Мандрівки та визначні місця</a></li>
-            <li><a href="#" class="list__item">Міський роман</a></li>
-            <li><a href="#" class="list__item">Людина і суспільство</a></li>
-            <li><a href="#" class="list__item">Любовні романи</a></li>
-            <li><a href="#" class="list__item">Література для дітей</a></li>
-            <li><a href="#" class="list__item">Лідерство та підприємництво</a></li>
-            <li><a href="#" class="list__item">Краса і мода</a></li>
-            <li><a href="#" class="list__item">Класична література</a></li>
-            <li><a href="#" class="list__item">Казки, легенди, міфологія</a></li>
-            <li><a href="#" class="list__item">Золоті письменники україни</a></li>
-            <li><a href="#" class="list__item">Жахи та містика</a></li>
-            <li><a href="#" class="list__item">Драматургія</a></li>
-            <li><a href="#" class="list__item">Дизайн</a></li>
-            <li><a href="#" class="list__item">Детективи</a></li>
-            <li><a href="#" class="list__item">Гумористична література</a></li>
-            <li><a href="#" class="list__item">Виховання</a></li>
-            <li><a href="#" class="list__item">Військова справа</a></li>
-            <li><a href="#" class="list__item">Байки</a></li>
-            <li><a href="#" class="list__item">Біографії і автобіографії</a></li>
-            <li><a href="#" class="list__item">Архітектура</a></li>
-            <li><a href="#" class="list__item">Американська література</a></li>
-            <li><a href="#" class="list__item">Альтернативна історія</a></li>
-            <li><a href="#" class="list__item">Історична література</a></li>
-            <li><a href="#" class="list__item">Історія україни</a></li>
-            <li><a href="#" class="list__item">Історія срср</a></li>
-            <li><a href="#" class="list__item">Історія</a></li>
-            <li><a href="#" class="list__item">Європейська література</a></li>
-          </ul>
-        </div>
-        <!--BEGIN footer-->
-        <footer class="footer">
-          <p class="footer__inner">
-            © 1998–2014 ПрАТ «Київстар» Всі права захищено. 
-            Використання матеріалів цього сайту можливе 
-            тільки з посиланням на джерело. 
-          </p>
-        </footer>
-        <!--END footer-->
-        <div class="page-overlay"></div>
       </div>
+      <ul class="menu__list">
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-logo"></div><span>Головна</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-book2"></div><span>Мої книжки</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-label"></div><span>Бестселери</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-down"></div><span>Новi надходження</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-list"></div><span>Жанри</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-pencil"></div><span>Автори</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-copy"></div><span>Новини</span></a></li>
+        <li><a href="#" class="menu__item">
+            <div class="menu__icon icon icon-gear"></div><span>Налаштування</span></a></li>
+      </ul>
+    </nav>
+    <!--END menu-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header">
+        <div class="header__inner">
+          <div class="header__menu">
+            <button type="button" class="menu-btn"><i class="icon icon-menu"></i></button>
+          </div>
+          <div class="header__search">
+            <button type="button" class="search-btn"><i class="icon icon-search"></i><i class="icon icon-close2"></i></button>
+          </div>
+          <div class="header__logo"><a href="/" class="ks-logo"><i class="icon icon-logo"></i></a></div>
+        </div>
+        <form class="search">
+          <input type="text" name="SEARCH" class="search__input">
+          <button type="submit" class="search__button"><i class="icon icon-search"></i></button>
+        </form>
+      </header>
+      <!--END header-->
+      <!--BEGIN page-wrapper-->
+      <div class="page-wrapper">
+        <h1 class="title">Жанри</h1>
+        <ul class="list">
+          <li><a href="#" class="list__item">Шкільна програма</a></li>
+          <li><a href="#" class="list__item">Фентезі</a></li>
+          <li><a href="#" class="list__item">Фантастика</a></li>
+          <li><a href="#" class="list__item">Філософія</a></li>
+          <li><a href="#" class="list__item">Українська класика</a></li>
+          <li><a href="#" class="list__item">Трилери</a></li>
+          <li><a href="#" class="list__item">Технології</a></li>
+          <li><a href="#" class="list__item">Східна література</a></li>
+          <li><a href="#" class="list__item">Сучасна українська література</a></li>
+          <li><a href="#" class="list__item">Сучасна російська література</a></li>
+          <li><a href="#" class="list__item">Сучасна проза</a></li>
+          <li><a href="#" class="list__item">Стиль життя</a></li>
+          <li><a href="#" class="list__item">Світова література</a></li>
+          <li><a href="#" class="list__item">Світова кухня</a></li>
+          <li><a href="#" class="list__item">Російська класика</a></li>
+          <li><a href="#" class="list__item">Релігія</a></li>
+          <li><a href="#" class="list__item">Публіцистика</a></li>
+          <li><a href="#" class="list__item">Психологія</a></li>
+          <li><a href="#" class="list__item">Пригодницька література</a></li>
+          <li><a href="#" class="list__item">Практичні вміння</a></li>
+          <li><a href="#" class="list__item">Політичний трилер</a></li>
+          <li><a href="#" class="list__item">Політика</a></li>
+          <li><a href="#" class="list__item">Поезія</a></li>
+          <li><a href="#" class="list__item">Підліткова література</a></li>
+          <li><a href="#" class="list__item">Оповідання</a></li>
+          <li><a href="#" class="list__item">Огляди бізнес-книжок</a></li>
+          <li><a href="#" class="list__item">Медицина та здоров'я</a></li>
+          <li><a href="#" class="list__item">Мандрівки та визначні місця</a></li>
+          <li><a href="#" class="list__item">Міський роман</a></li>
+          <li><a href="#" class="list__item">Людина і суспільство</a></li>
+          <li><a href="#" class="list__item">Любовні романи</a></li>
+          <li><a href="#" class="list__item">Література для дітей</a></li>
+          <li><a href="#" class="list__item">Лідерство та підприємництво</a></li>
+          <li><a href="#" class="list__item">Краса і мода</a></li>
+          <li><a href="#" class="list__item">Класична література</a></li>
+          <li><a href="#" class="list__item">Казки, легенди, міфологія</a></li>
+          <li><a href="#" class="list__item">Золоті письменники україни</a></li>
+          <li><a href="#" class="list__item">Жахи та містика</a></li>
+          <li><a href="#" class="list__item">Драматургія</a></li>
+          <li><a href="#" class="list__item">Дизайн</a></li>
+          <li><a href="#" class="list__item">Детективи</a></li>
+          <li><a href="#" class="list__item">Гумористична література</a></li>
+          <li><a href="#" class="list__item">Виховання</a></li>
+          <li><a href="#" class="list__item">Військова справа</a></li>
+          <li><a href="#" class="list__item">Байки</a></li>
+          <li><a href="#" class="list__item">Біографії і автобіографії</a></li>
+          <li><a href="#" class="list__item">Архітектура</a></li>
+          <li><a href="#" class="list__item">Американська література</a></li>
+          <li><a href="#" class="list__item">Альтернативна історія</a></li>
+          <li><a href="#" class="list__item">Історична література</a></li>
+          <li><a href="#" class="list__item">Історія україни</a></li>
+          <li><a href="#" class="list__item">Історія срср</a></li>
+          <li><a href="#" class="list__item">Історія</a></li>
+          <li><a href="#" class="list__item">Європейська література</a></li>
+        </ul>
+      </div>
+      <!--END page-wrapper-->
+      <!--BEGIN footer-->
+      <footer class="footer">
+        <p class="footer__inner">
+          © 1998–2014 ПрАТ «Київстар» Всі права захищено. 
+          Використання матеріалів цього сайту можливе 
+          тільки з посиланням на джерело. 
+        </p>
+      </footer>
+      <!--END footer-->
+      <div class="page-overlay"></div>
     </div>
     <!--END out-->
     <!--LOAD SCRIPTS-->

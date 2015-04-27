@@ -2,6 +2,7 @@ doctype html
 html
   head
     include _head
+ 
   body
 
     //- div(style="text-align:center;margin:20px 0")
@@ -13,16 +14,13 @@ html
       include _menu
     .out
       block header
-        include _header
+        include _header-book
       
-      //BEGIN page-wrapper
-      .page-wrapper
+      .book-page-wrapper
         block content
-      //END page-wrapper
-
+      
       //BEGIN footer
       block footer
-        include _footer
       //END footer
       
       block notice

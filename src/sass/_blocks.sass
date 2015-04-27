@@ -3,29 +3,27 @@
   vertical-align: top
   font-size: 46px
   line-height: 1
-  color: #FFF
+  color: inherit
   .icon
     vertical-align: top
 
-.menu-btn
+.menu-btn,
+.search-btn,
+.settings-btn
   width: 46px
   height: 46px
   line-height: 46px
   background: none
   font-size: 19px
-  color: #FFF
-  .icon
+  color: inherit
+
+.menu-btn
+  .icon-menu
     vertical-align: middle
     position: relative
     top: -3px
 
 .search-btn
-  width: 46px
-  height: 46px
-  line-height: 46px
-  background: none
-  font-size: 19px
-  color: #FFF
   position: relative
   .icon-search
     vertical-align: middle
@@ -47,6 +45,15 @@
       visibility: visible
     .icon-search
       visibility: hidden
+
+.settings-btn
+  .icon-gear
+    font-size: 24px
+    vertical-align: middle
+    position: relative
+    top: -2px
+  &.is-active
+    color: $blue
 
 
 
@@ -472,3 +479,54 @@ textarea.input
     font-size: 12px
   &:hover
     background: darken(#F7F8FB, 5%)
+
+
+
+.paginator
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 10px
+  text-align: center
+  color: #3B4952
+  font-size: 14px
+  white-space: nowrap
+
+.paginator__inner
+  display: inline-block
+
+.paginator__prev,
+.paginator__next
+  display: inline-block
+  vertical-align: middle
+  background: $yellow
+  width: 30px
+  height: 30px
+  text-align: center
+  border-radius: 50%
+  color: #4C5A63
+  &:before
+    display: inline-block
+    line-height: 1
+
+.paginator__prev
+  &:before
+    transform: rotate(90deg)
+
+.paginator__next
+  &:before
+    transform: rotate(-90deg)
+
+a.paginator__btn
+  line-height: 30px
+
+.paginator__current
+  display: inline-block
+  vertical-align: middle
+  margin: 0 5px
+  b, strong
+    display: inline-block
+    min-width: 25px
+    text-align: center
+    +bold
