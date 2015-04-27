@@ -13,16 +13,16 @@ head.ready(function() {
         });
 
         var menu = {
-            visible        :  false,
+            visible        : false,
             element        : $('.menu'),
             container      : body,
             className      : 'is-menu-open',
-            show: function() {
+            open: function() {
                 this.visible = true;
                 this.element.show();
                 this.container.addClass(this.className);
             },
-            hide: function() {
+            close: function() {
                 this.container.removeClass(this.className);
                 setTimeout(function() {
                     this.element.hide();
@@ -31,9 +31,9 @@ head.ready(function() {
             },
             toggle: function() {
                 if ( this.visible ) {
-                    this.hide();
+                    this.close();
                 } else {
-                    this.show();
+                    this.open();
                 }
             }
         };
@@ -43,7 +43,7 @@ head.ready(function() {
             visible   : false,
             className : "is-visible",
             element   : pageOverlay,
-            show: function() {
+            open: function() {
                 if ( !this.visible ) {
                     this.element.show();
                     setTimeout(function() {
@@ -52,7 +52,7 @@ head.ready(function() {
                     this.visible = true;
                 }
             },
-            hide: function() {
+            close: function() {
                 if ( this.visible ) {
                     this.element.removeClass(this.className);
                     setTimeout(function() {
@@ -63,9 +63,9 @@ head.ready(function() {
             },
             toggle: function() {
                 if ( this.visible ) {
-                    this.hide();
+                    this.close();
                 } else {
-                    this.show();
+                    this.open();
                 }
             }
 
@@ -75,19 +75,19 @@ head.ready(function() {
             visible   : false,
             className : "is-visible",
             element   : $('.search'),
-            show: function() {
+            open: function() {
                 this.visible = true;
                 this.element.addClass(this.className);
             },
-            hide: function() {
+            close: function() {
                 this.element.removeClass(this.className);
                 this.visible = false;
             },
             toggle: function() {
                 if ( this.visible ) {
-                    this.hide();
+                    this.close();
                 } else {
-                    this.show();
+                    this.open();
                 }
             }
         };
@@ -96,14 +96,14 @@ head.ready(function() {
             visible   : false,
             className : "is-visible",
             element   : $('.settings'),
-            show: function() {
+            open: function() {
                 this.visible = true;
                 this.element.show();
                 setTimeout(function() {
                     this.element.addClass(this.className);
                 }.bind(this), 10);
             },
-            hide: function() {
+            close: function() {
                 this.element.removeClass(this.className);
                 setTimeout(function() {
                     this.element.hide();
@@ -112,9 +112,9 @@ head.ready(function() {
             },
             toggle: function() {
                 if ( this.visible ) {
-                    this.hide();
+                    this.close();
                 } else {
-                    this.show();
+                    this.open();
                 }
             }
         };
@@ -125,46 +125,32 @@ head.ready(function() {
             event.stopPropagation();
             menu.toggle();
             if ( search.visible ) {
-                search.hide();
-                overlay.show();
-                console.log(1);
+                search.close();
+                overlay.open();
             } else if ( settings.visible ) {
-                settings.hide();
-                overlay.show();
-                console.log(2);
+                settings.close();
+                overlay.open();
             } else {
                 overlay.toggle();
-                console.log(3);
             }
-            pageOverlay.trigger('menu-open');
-        });
-
-        pageOverlay.bind('menu-open', function() {
-            pageOverlay.bind('click', function() {
-                 menu.hide();
-                 overlay.hide();
-                 pageOverlay.unbind('click');
-            });
         });
 
         searchBtn.on('click', function(event) {
             event.preventDefault();
             search.toggle();
             overlay.toggle();
-            pageOverlay.trigger('search-open');
-        });
-
-        pageOverlay.bind('search-open', function() {
-            pageOverlay.bind('click', function() {
-                 search.hide();
-                 overlay.hide();
-                 pageOverlay.unbind('click');
-            });
         });
 
         settingsBtn.on('click', function() {
             settings.toggle();
             overlay.toggle();
+        });
+
+        pageOverlay.bind('click', function() {
+            if ( menu.visible ) menu.close();
+            if ( search.visible ) search.close();
+            if ( settings.visible ) settings.close();
+            overlay.close();
         });
 
         if ( dropdown.length ) {
