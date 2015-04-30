@@ -678,10 +678,12 @@ a.news__more:hover
 .accordion__item
   position: relative
   counter-increment: accordion-counter
-  padding-left: 30px
-  cursor: pointer
   & + &
     margin-top: 20px
+
+.accordion__head
+  position: relative
+  padding-left: 30px
   > .icon-bullet
     position: absolute
     top: 3px
@@ -689,6 +691,7 @@ a.news__more:hover
     width: 14px
     height: 14px
     line-height: 14px
+    cursor: pointer
 
 .accordion__title
   display: inline-block
@@ -697,6 +700,7 @@ a.news__more:hover
   +bold
   text-decoration: none
   color: $blue
+  cursor: pointer
   > span
     border-bottom: 1px dotted
   &:before
@@ -708,7 +712,7 @@ a.news__more:hover
 
 .accordion__content
   display: none
-  margin: 20px 0 0 -20px
+  margin: 20px 0 0 10px
 
 
 

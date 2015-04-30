@@ -185,7 +185,7 @@ head.ready(function() {
             if ( accordion.length ) {
 
                 var itemSelector    = '.accordion__item',
-                    btnSelector     = '.accordion__title',
+                    btnSelector     = '.accordion__head',
                     contentSelector = '.accordion__content',
                     activeClass     = 'is-active';
 
