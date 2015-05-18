@@ -282,11 +282,8 @@ head.ready(function() {
             });
         }
 
-
-
         $('.js-popup').on('click', function(event) {
             event.preventDefault();
-            console.log(this);
             var target = $(this).data('popup');
             $('#' + target).fadeIn(300);
         });
