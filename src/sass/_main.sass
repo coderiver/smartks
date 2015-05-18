@@ -86,10 +86,11 @@
 .settings
   position: absolute
   z-index: 100
-  top: 100%
+  top: 80px
+  bottom: 0
   left: 0
   right: 0
-  list-style-type: decimal
+  // list-style-type: decimal
   color: #3B4952
   font-size: 16px
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1)
@@ -109,21 +110,47 @@
     background: #FFF
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1)
     transform: rotate(-45deg) skew(4deg, 4deg)
+  &.is-visible
+    // transition-timing-function: cubic-bezier(0, 0.07, 0.32, 1.32)
+    transform: scale(1, 1)
+  &.is-show-more
+    .settings__inner
+      transform: translate3d(-50%, 0 , 0)
+
+.settings__inner
+  position: relative
+  z-index: 1
+  background: #FFF
+  max-height: 100%
+  width: 200%
+  box-sizing: border-box
+  // padding: 20px
+  overflow-x: hidden
+  overflow-y: auto
+  transition: transform 0.4s ease
+  +wos
+  +clr
+
+.settings__left
+  float: left
+  width: 50%
+  padding: 20px
+  box-sizing: border-box
+
+.settings__right
+  float: right
+  width: 50%
+  padding: 20px
+  box-sizing: border-box
+
+.settings__list
+  padding: 15px
+  list-style-type: decimal
   a
     text-decoration: none
     &:hover,
     &:active
       text-decoration: underline
-  &.is-visible
-    // transition-timing-function: cubic-bezier(0, 0.07, 0.32, 1.32)
-    transform: scale(1, 1)
-
-.settings__inner
-  position: relative
-  z-index: 1
-  padding: 35px
-  background: #FFF
-  list-style-type: decimal
 
 .settings__item
   margin-left: 25px

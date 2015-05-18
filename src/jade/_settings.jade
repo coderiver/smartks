@@ -1,0 +1,119 @@
+//BEGIN settings
+.settings
+  .settings__inner
+    .settings__left
+      ol.settings__list
+        li.settings__item
+          a(href="#settings") Налаштування
+        li.settings__item
+          a(href="#go-to") На іншу сторінку
+        li.settings__item
+          a(href="#") Читати далі
+        li.settings__item
+          a(href="#") До обкладинки
+        li.settings__item
+          a(href="#") Додати закладку
+        li.settings__item
+          a(href="#") Зміст книжки
+        li.settings__item
+          a(href="#bookmarks") Цитати та закладки
+        li.settings__item
+          a(href="#search") Пошук слова
+
+    .settings__right
+      .breadcrumbs
+        a.breadcrumbs__link(href="#") До списку
+      // settings
+      .js-settings-items
+        #settings
+          strong.title Налаштування
+          .field
+            label.field__label
+              | Розмір шрифту
+            .field__row
+              .amount.js-amount
+                button.amount__btn.amount__minus(type="button")
+                input.amount__value(type="text", readonly, value="16")
+                button.amount__btn.amount__plus(type="button")
+          .field
+            span.field__label
+              | Колір фону і шрифту
+            .field__row
+              .choose.choose_color
+                label.choose__item
+                  input.choose__radio(type="radio", name="COLOR", checked)
+                  span.choose__btn Білий
+                label.choose__item
+                  input.choose__radio(type="radio", name="COLOR")
+                  span.choose__btn.choose__btn_black Чорний
+                label.choose__item
+                  input.choose__radio(type="radio", name="COLOR")
+                  span.choose__btn.choose__btn_sepia Сепія
+          .field
+            label.field__label
+              | Міжрядковий інтервал
+            .field__row
+              .choose
+                label.choose__item
+                  input.choose__radio(type="radio", name="SPACING", checked)
+                  span.choose__btn
+                    i.icon-spacing
+                label.choose__item
+                  input.choose__radio(type="radio", name="SPACING")
+                  span.choose__btn
+                    i.icon.icon-spacing.icon-spacing_middle
+                label.choose__item
+                  input.choose__radio(type="radio", name="SPACING")
+                  span.choose__btn
+                    i.icon-spacing.icon-spacing_big
+          .field
+            label.field__label
+              | Шрифт
+            .field__input.field__input_dd.js-dd
+              input.input.js-dd-selected(type="text", name="PHONE_CODE", readonly, value="067")
+              i.icon.icon-bullet
+              select.field__select
+                option(value="1") Arial
+                option(value="2") Helvetica
+                option(value="3") Arial Bold
+          
+        //go-to
+        #go-to
+          strong.title
+            | Перейти на сторінку:
+
+          form.go-to
+            input.input(type="number")
+            button.btn.btn_yellow(type="button") Перейти
+
+        //search
+        #search
+          .book-search
+            .book-search__inner
+              input.book-search__input.input(type="text")
+              button.book-search__btn.book-search__down(type="button")
+                i.icon.icon-arrow
+              button.book-search__btn.book-search__up(type="button")
+                i.icon.icon-arrow
+            button.book-search__btn.book-search__close(type="button")
+              .icon.icon-close
+
+        //quotes and bookmarks
+        #bookmarks
+          strong.title
+            | Цитати та закладки
+
+          ul.bookmark-list
+            li
+              a.bookmark(href="#")
+                span.bookmark__link
+                  | Зажигая звезду. История «Киевстар» от первого лица
+                span.bookmark__footer Стор. 3
+                i.icon.icon-bullet
+            li
+              a.bookmark(href="#")
+                span.bookmark__link
+                  | Зажигая звезду. История «Киевстар» от первого лица
+                span.bookmark__footer Стор. 11
+                i.icon.icon-bullet
+//END settings

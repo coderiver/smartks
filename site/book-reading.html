@@ -57,20 +57,113 @@
             </div>
           </div>
         </div>
-        <div class="settings">
-          <ol class="settings__inner">
-            <li class="settings__item"><a href="#">Налаштування</a></li>
-            <li class="settings__item"><a href="#">На іншу сторінку</a></li>
-            <li class="settings__item"><a href="#">Читати далі</a></li>
-            <li class="settings__item"><a href="#">До обкладинки</a></li>
-            <li class="settings__item"><a href="#">Додати закладку</a></li>
-            <li class="settings__item"><a href="#">Зміст книжки</a></li>
-            <li class="settings__item"><a href="#">Цитати та закладки</a></li>
-            <li class="settings__item"><a href="#">Пошук слова</a></li>
-          </ol>
-        </div>
       </header>
       <!--END header-->
+      <!--BEGIN settings-->
+      <div class="settings">
+        <div class="settings__inner">
+          <div class="settings__left">
+            <ol class="settings__list">
+              <li class="settings__item"><a href="#settings">Налаштування</a></li>
+              <li class="settings__item"><a href="#go-to">На іншу сторінку</a></li>
+              <li class="settings__item"><a href="#">Читати далі</a></li>
+              <li class="settings__item"><a href="#">До обкладинки</a></li>
+              <li class="settings__item"><a href="#">Додати закладку</a></li>
+              <li class="settings__item"><a href="#">Зміст книжки</a></li>
+              <li class="settings__item"><a href="#bookmarks">Цитати та закладки</a></li>
+              <li class="settings__item"><a href="#search">Пошук слова</a></li>
+            </ol>
+          </div>
+          <div class="settings__right">
+            <div class="breadcrumbs"><a href="#" class="breadcrumbs__link">До списку</a></div>
+            <!-- settings-->
+            <div class="js-settings-items">
+              <div id="settings"><strong class="title">Налаштування</strong>
+                <div class="field">
+                  <label class="field__label">Розмір шрифту</label>
+                  <div class="field__row">
+                    <div class="amount js-amount">
+                      <button type="button" class="amount__btn amount__minus"></button>
+                      <input type="text" readonly value="16" class="amount__value">
+                      <button type="button" class="amount__btn amount__plus"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="field"><span class="field__label">Колір фону і шрифту</span>
+                  <div class="field__row">
+                    <div class="choose choose_color">
+                      <label class="choose__item">
+                        <input type="radio" name="COLOR" checked class="choose__radio"><span class="choose__btn">Білий</span>
+                      </label>
+                      <label class="choose__item">
+                        <input type="radio" name="COLOR" class="choose__radio"><span class="choose__btn choose__btn_black">Чорний</span>
+                      </label>
+                      <label class="choose__item">
+                        <input type="radio" name="COLOR" class="choose__radio"><span class="choose__btn choose__btn_sepia">Сепія</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="field__label">Міжрядковий інтервал</label>
+                  <div class="field__row">
+                    <div class="choose">
+                      <label class="choose__item">
+                        <input type="radio" name="SPACING" checked class="choose__radio"><span class="choose__btn"><i class="icon-spacing"></i></span>
+                      </label>
+                      <label class="choose__item">
+                        <input type="radio" name="SPACING" class="choose__radio"><span class="choose__btn"><i class="icon icon-spacing icon-spacing_middle"></i></span>
+                      </label>
+                      <label class="choose__item">
+                        <input type="radio" name="SPACING" class="choose__radio"><span class="choose__btn"><i class="icon-spacing icon-spacing_big"></i></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="field">
+                  <label class="field__label">Шрифт</label>
+                  <div class="field__input field__input_dd js-dd">
+                    <input type="text" name="PHONE_CODE" readonly value="067" class="input js-dd-selected"><i class="icon icon-bullet"></i>
+                    <select class="field__select">
+                      <option value="1">Arial</option>
+                      <option value="2">Helvetica</option>
+                      <option value="3">Arial Bold</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <!--go-to-->
+              <div id="go-to"><strong class="title">Перейти на сторінку:</strong>
+                <form class="go-to">
+                  <input type="number" class="input">
+                  <button type="button" class="btn btn_yellow">Перейти</button>
+                </form>
+              </div>
+              <!--search-->
+              <div id="search">
+                <div class="book-search">
+                  <div class="book-search__inner">
+                    <input type="text" class="book-search__input input">
+                    <button type="button" class="book-search__btn book-search__down"><i class="icon icon-arrow"></i></button>
+                    <button type="button" class="book-search__btn book-search__up"><i class="icon icon-arrow"></i></button>
+                  </div>
+                  <button type="button" class="book-search__btn book-search__close">
+                    <div class="icon icon-close"></div>
+                  </button>
+                </div>
+              </div>
+              <!--quotes and bookmarks-->
+              <div id="bookmarks"><strong class="title">Цитати та закладки</strong>
+                <ul class="bookmark-list">
+                  <li><a href="#" class="bookmark"><span class="bookmark__link">Зажигая звезду. История «Киевстар» от первого лица</span><span class="bookmark__footer">Стор. 3</span><i class="icon icon-bullet"></i></a></li>
+                  <li><a href="#" class="bookmark"><span class="bookmark__link">Зажигая звезду. История «Киевстар» от первого лица</span><span class="bookmark__footer">Стор. 11</span><i class="icon icon-bullet"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END settings-->
       <div class="book-page-wrapper">
         <div class="book-text">
           <h3>Глава 3</h3>

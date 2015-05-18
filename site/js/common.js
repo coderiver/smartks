@@ -5,7 +5,8 @@ head.ready(function() {
             pageOverlay = $('.page-overlay'),
             dropdown    = $('.js-dd'),
             searchBtn   = $('.search-btn'),
-            settingsBtn = $('.settings-btn');
+            settingsBtn = $('.settings-btn'),
+            amount      = $('.js-amount');
 
 
         $('#switch-view').on('click', function() {
@@ -93,9 +94,41 @@ head.ready(function() {
         };
 
         var settings = {
-            visible   : false,
-            className : "is-visible",
-            element   : $('.settings'),
+            visible : false,
+            className : 'is-visible',
+            showMoreClass: 'is-show-more',
+            element : $('.settings'),
+            button : $('.settings-btn'),
+            init: function() {
+                var _ = this,
+                    link = this.element.find('.settings__list a'),
+                    backButton = this.element.find('.breadcrumbs__link');
+                    settingsItems = this.element.find('.js-settings-items').children();
+
+                settingsItems.hide();
+
+                link.on('click', function(event) {
+                    event.preventDefault();
+                    var targetSettingsItem = $(this).attr('href');
+                    $(targetSettingsItem).show();
+                    _.showMore();
+                });
+                _.button.on('click', function(event) {
+                    event.preventDefault();
+                    _.toggle();
+                    overlay.toggle();
+                    settingsItems.hide();
+                    _.hideMore();
+                });
+                backButton.on('click', function(event) {
+                    event.preventDefault();
+                    setTimeout(function() {
+                        settingsItems.hide();
+                    }, 400);
+                    _.hideMore();
+                });
+
+            },
             open: function() {
                 this.visible = true;
                 this.element.show();
@@ -116,7 +149,21 @@ head.ready(function() {
                 } else {
                     this.open();
                 }
+            },
+            showMore: function(settingsItem) {
+                this.element.addClass(this.showMoreClass);
+            },
+            hideMore: function(settingsItem) {
+                this.element.removeClass(this.showMoreClass);
             }
+        };
+
+        if ( $('.settings').length ) {
+            settings.init();
+            // settingsBtn.on('click', function() {
+            //     settings.toggle();
+            //     overlay.toggle();
+            // });
         };
 
 
@@ -138,11 +185,6 @@ head.ready(function() {
         searchBtn.on('click', function(event) {
             event.preventDefault();
             search.toggle();
-            overlay.toggle();
-        });
-
-        settingsBtn.on('click', function() {
-            settings.toggle();
             overlay.toggle();
         });
 
@@ -216,5 +258,29 @@ head.ready(function() {
             }
 
         })();
+
+        if ( amount.length ) {
+            amount.each(function() {
+                var el = $(this),
+                    input = el.find('.amount__value'),
+                    plus  = el.find('.amount__plus'),
+                    minus  = el.find('.amount__minus');
+
+                plus.on('click', function(event) {
+                    event.preventDefault();
+                    value = input.val();
+                    if ( value >= 130 ) return;
+                    input.val(++value);
+                });
+
+                minus.on('click', function(event) {
+                    event.preventDefault();
+                    value = input.val();
+                    if ( value <= 1 ) return;
+                    input.val(--value);
+                });
+            });
+        }
+
 
 });

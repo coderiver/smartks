@@ -77,6 +77,39 @@
   border-radius: 50%
   color: #434E55
 
+.icon-spacing
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  width: 30px
+  height: 17px
+  box-sizing: border-box
+  border: solid #88949C
+  border-width: 2px 0
+  &:before,
+  &:after
+    content: ""
+    position: absolute
+    left: 0
+    right: 0
+    height: 2px
+    background: #88949C
+  &:before
+    top: 3px
+  &:after
+    bottom: 3px
+  &_middle
+    height: 16px
+    &:before
+      top: 5px
+    &:after
+      display: none
+  &_big
+    height: 12px
+    &:before,
+    &:after
+      display: none
+
 .hint
   display: inline-block
   background: $yellow
@@ -299,6 +332,7 @@ a.btn_border
   font-size: 14px
   line-height: 1
   color: #3B4952
+  -webkit-appearance: none
   +placeholder
     font-size: 14px
     +bolder
@@ -532,3 +566,204 @@ a.paginator__btn
     min-width: 25px
     text-align: center
     +bold
+
+
+.amount
+  display: inline-block
+  position: relative
+  width: 130px
+  height: 40px
+  box-sizing: border-box
+  background: $gray
+  border-radius: 20px
+  color: #3B4952
+
+.amount__value
+  display: block
+  width: 100%
+  box-sizing: border-box
+  padding: 0 40px
+  text-align: center
+  font-size: 16px
+  +bolder
+  text-align: center
+  background: none
+  line-height: 40px
+  color: #3B4952
+
+.amount__btn
+  position: absolute
+  z-index: 1
+  top: 0
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  background: $yellow
+  text-align: center
+  line-height: 40px
+  color: #3B4952
+  font-size: 12px
+  +tap
+  &:before
+    @extend %icon
+
+a.amount__btn
+  line-height: 40px
+
+.amount__minus
+  left: 0
+  &:before
+    content: $icon-minus-simple
+
+.amount__plus
+  right: 0
+  &:before
+    content: $icon-plus-simple
+
+
+.choose
+  position: relative
+  font-size: 0
+
+
+.choose__item
+  position: relative
+  display: inline-block
+  vertical-align: top
+  margin-right: 15px
+
+.choose__radio
+  position: absolute
+  z-index: 1
+  width: 100%
+  height: 100%
+  opacity: 0
+
+.choose__btn
+  display: block
+  position: relative
+  height: 40px
+  box-sizing: border-box
+  min-width: 60px
+  padding: 0 8px
+  border-radius: 5px
+  line-height: 40px
+  font-size: 14px
+  text-align: center
+  +bolder
+  color: #000
+  box-shadow: 0 0 0 3px #F7F8FB inset
+  &:last-child
+    margin-right: 0
+  &_black
+    background: #000
+    color: #FFF
+    box-shadow: none
+  &_sepia
+    background: #EFEBDE
+    color: #391d04
+    box-shadow: none
+
+  .choose__radio:checked ~ &
+    box-shadow: 0 0 0 3px $blue inset
+
+.choose_color
+  .choose__item
+    margin-right: 20px
+    &:last-child
+      margin-right: 0
+  .choose__btn
+    min-width: 80px
+
+
+.go-to
+  .input
+    width: 60px
+    margin: auto
+    text-align: center
+  .btn
+    display: block
+    margin: auto
+    margin-top: 20px
+
+
+
+.book-search
+  position: relative
+  height: 34px
+  font-size: 0
+  padding-right: percentage(30/280)
+  box-sizing: border-box
+  white-space: nowrap
+
+.book-search__inner
+  background: #CAD5DD
+  border-radius: 5px
+  .book-search__btn
+    width: percentage(30/250)
+
+.book-search__input
+  display: inline-block
+  vertical-align: top
+  width: percentage(190/250)
+
+.book-search__btn
+  display: inline-block
+  vertical-align: top
+  width: percentage(30/280)
+  height: 34px
+  text-align: center
+  background: none
+  color: #3B4952
+  font-size: 10px
+
+.book-search__up
+  .icon-arrow
+    transform: rotate(180deg)
+
+.book-search__close
+  position: absolute
+  top: 0
+  right: 0
+  font-size: 10px
+  color: $blue
+
+
+.bookmark-list
+  margin-top: 30px
+  &:first-child
+    margin-top: 0
+  li
+    margin-top: 25px
+    &:first-child
+      margin-top: 0
+
+.bookmark
+  display: block
+  position: relative
+  padding-right: 20px
+  margin-top: 25px
+  font-size: 14px
+  text-decoration: none
+  color: inherit
+  .icon-bullet
+    position: absolute
+    top: 2px
+    right: 0
+    transform: rotate(-90deg)
+  &:first-child
+    margin-top: 0
+
+.bookmark__link
+  color: $blue
+  border-bottom: 1px dotted
+  font-size: 16px
+  text-decoration: none
+  +bold
+  &:hover
+    text-decoration: none
+    border: none
+
+.bookmark__footer
+  display: block
+  margin-top: 7px
