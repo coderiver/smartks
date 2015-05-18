@@ -164,7 +164,7 @@ head.ready(function() {
             //     settings.toggle();
             //     overlay.toggle();
             // });
-        };
+        }
 
 
         menuBtn.on('click', function(event) {
@@ -281,6 +281,20 @@ head.ready(function() {
                 });
             });
         }
+
+
+
+        $('.js-popup').on('click', function(event) {
+            event.preventDefault();
+            console.log(this);
+            var target = $(this).data('popup');
+            $('#' + target).fadeIn(300);
+        });
+
+        $('.js-popup-close').on('click', function(event) {
+            event.preventDefault();
+            $(this).parents('.popup').fadeOut(300);
+        });
 
 
 });

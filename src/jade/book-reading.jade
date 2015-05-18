@@ -31,6 +31,11 @@ block content
       прибыль - автоперевозками, торговлей оргтехникой и цветными металлами, 
       продуктами питания и т. д.
 
+    p
+      a.js-popup(href="#", data-popup="popup1") Відкрити попап #1
+      br
+      a.js-popup(href="#", data-popup="popup2") Відкрити попап #2
+
 block footer
   .paginator
     .paginator__inner
@@ -38,3 +43,27 @@ block footer
       .paginator__current.
         <b>11</b> з <b>89</b>
       button.paginator__next.icon.icon-arrow(type="button")
+
+block popup
+  #popup1.popup
+    .popup__inner
+      h3.title Активація підписки
+      p.
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+         Officiis veritatis <a href="#">laborum</a> quam obcaecati saepe consequatur provident sequi, 
+         optio consectetur dolorem accusamus hic praesentium nisi aspernatur 
+         voluptates non itaque, molestias nihil.
+      .popup__buttons
+        button.btn.btn_yellow(type="button") Підписатися
+        button.btn.js-popup-close(type="button") Закрити
+
+  #popup2.popup
+    .popup__inner
+      h3.title Повідомлення
+      p.
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+         Officiis veritatis <a href="#">laborum</a> quam obcaecati saepe consequatur provident sequi, 
+         optio consectetur dolorem accusamus hic praesentium nisi aspernatur 
+         voluptates non itaque, molestias nihil.
+      .popup__buttons
+        button.btn.btn_border.btn_fw.js-popup-close(type="button") Закрити

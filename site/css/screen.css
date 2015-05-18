@@ -364,7 +364,7 @@ a.amount__btn { line-height: 40px; }
 .settings.is-visible { -webkit-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1); }
 .settings.is-show-more .settings__inner { -webkit-transform: translate3d(-50%, 0, 0); transform: translate3d(-50%, 0, 0); }
 
-.settings__inner { position: relative; z-index: 1; background: #FFF; max-height: 100%; width: 200%; box-sizing: border-box; overflow-x: hidden; overflow-y: auto; -webkit-transition: -webkit-transform 0.4s ease; transition: transform 0.4s ease; -webkit-overflow-scrolling: touch; *zoom: 1; }
+.settings__inner { position: relative; z-index: 1; background: #FFF; height: 100%; width: 200%; box-sizing: border-box; overflow-x: hidden; overflow-y: auto; -webkit-transition: -webkit-transform 0.4s ease; transition: transform 0.4s ease; -webkit-overflow-scrolling: touch; *zoom: 1; }
 .settings__inner:after { content: " "; display: table; clear: both; }
 
 .settings__left { float: left; width: 50%; padding: 20px; box-sizing: border-box; }
@@ -569,6 +569,18 @@ a.news__more:hover { text-decoration: underline; }
 .book-text p:first-child, .book-text h1:first-child, .book-text h1:first-child, .book-text h3:first-child, .book-text h4:first-child, .book-text h5:first-child, .book-text h6:first-child { margin-top: 0; }
 .book-text p:last-child { margin-bottom: 0; }
 .book-text h1, .book-text h1, .book-text h3, .book-text h4, .book-text h5, .book-text h6 { text-align: center; font-size: 16px; font-family: "PTSerif-Bold", Helvetica, Arial, sans-serif; font-weight: normal; }
+
+.popup { display: none; position: fixed; z-index: 101; top: 0; left: 0; right: 0; bottom: 0; box-sizing: border-box; padding: 10px; background: rgba(64, 72, 77, 0.6); text-align: center; font-size: 0; white-space: nowrap; overflow: auto; -webkit-overflow-scrolling: touch; }
+.popup:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+
+.popup__inner { display: inline-block; vertical-align: middle; padding: 15px; white-space: normal; background: #FFF; border-radius: 5px; border: 1px solid #ECEEF0; font-size: 14px; text-align: left; }
+.popup__inner .title { text-align: center; margin-bottom: 10px; font-size: 20px; }
+
+.popup__buttons { text-align: center; margin-top: 12px; *zoom: 1; }
+.popup__buttons:after { content: " "; display: table; clear: both; }
+.popup__buttons .btn:nth-last-child(n+2):first-child, .popup__buttons .btn:nth-last-child(n+2):first-child + .btn { width: 48%; padding-left: 15px; padding-right: 15px; }
+.popup__buttons .btn:nth-last-child(n+2):first-child { float: left; }
+.popup__buttons .btn:nth-last-child(n+2):first-child + .btn { float: right; }
 
 
 
